@@ -7,8 +7,8 @@ const content = {
           img1: '',
           img2: ''
         },
-        leftFullWidth: true,
-        rightFullWidth: false
+        mainLeftWidth: 2
+
       },
       page2: {
         heading: "About me",
@@ -17,8 +17,8 @@ const content = {
           img1: '/img/home/1.jpeg',
 
         },
-        leftFullWidth: false,
-        rightFullWidth: false
+        mainLeftWidth: 1,
+
       },
       page3: {
         heading: "My Skills",
@@ -26,8 +26,8 @@ const content = {
         images: {
           img1: '/img/home/2.jpg',
         },
-        leftFullWidth: false,
-        rightFullWidth: false
+        mainLeftWidth: 0,
+
       }
 
     },
@@ -39,8 +39,7 @@ const content = {
           img1: '',
           img2: ''
         },
-        leftFullWidth: false,
-        rightFullWidth: true
+        mainLeftWidth: 1,
       },
 
     }

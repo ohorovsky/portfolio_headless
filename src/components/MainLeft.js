@@ -7,7 +7,8 @@ import posed from 'react-pose';
 
 const configBox = {
     open: {width: '100%'},
-    closed: { width: '50%' }
+    half: { width: '50%' },
+    closed: { width: '0%' }
   }
 
 const Box = posed.div(configBox);
@@ -24,13 +25,22 @@ class MainLeft extends Component {
     // }
 
     render(){
-
+        let poseConfig;
+        if(this.props.mainLeftWidth === 0){
+            poseConfig = 'closed'
+        }
+        if(this.props.mainLeftWidth === 1){
+            poseConfig = 'half'
+        }
+        if(this.props.mainLeftWidth === 2){
+            poseConfig = 'open'
+        }
 
         return (
-            <Box className={`main-left`} pose={this.props.mainLeftIsOpen ? 'open' : 'closed'}>
+            <Box className={`main-left`} pose={poseConfig}>
                 <div className="main-left__wrapper">
                     <SmallNav updatePageContent={this.props.updatePageContent} updateActivePage={this.props.updateActivePage}/>
-                    {Object.keys(this.props.pageContent).map(key => <Page className='page__wrapper' pose={this.props.activePage === key ? 'active' : 'inactive'}><PageLeft key={key} index={key} pageContent={this.props.pageContent[key]}/></Page>)}
+                    {Object.keys(this.props.pageContent).map(key => <Page key={key} className='page__wrapper' pose={this.props.activePage === key ? 'active' : 'inactive'}><PageLeft key={key} index={key} pageContent={this.props.pageContent[key]}/></Page>)}
                     <SmallFooter />
                 </div>
             </Box>

@@ -15,8 +15,7 @@ class App extends Component {
 
   state = {
     posts: [],
-    mainLeftIsOpen: '',
-    mainRightIsOpen: '',
+    mainLeftWidth: '',
     pageContent: {},
     activePage: ''
   }
@@ -25,19 +24,17 @@ class App extends Component {
   componentWillMount(){
     //1. take a copy of the current state
     let pageContent = {...this.state.pageContent};
-    let mainLeftIsOpen = {...this.state.mainLeftIsOpen};
-    let mainRightIsOpen = {...this.state.mainRightIsOpen};
+    let mainLeftWidth = {...this.state.mainLeftWidth};
     let activePage = {...this.state.activePage};
     //2. update that state
     activePage = 'page1';
     pageContent = content.home;
-    mainLeftIsOpen = content.home.page1.leftFullWidth;
-    mainRightIsOpen = content.home.page1.rightFullWidth;
+    mainLeftWidth = content.home.page1.mainLeftWidth;
     //3. set state
     this.setState({
       pageContent,
-      mainLeftIsOpen,
-      mainRightIsOpen,
+      mainLeftWidth,
+
       activePage
     });
     const postsURL = 'http://invizzible:8/index.php/wp-json/wp/v2/posts';
@@ -53,32 +50,31 @@ class App extends Component {
   updatePageContent = page => {
       let pageContent = {...this.state.pageContent};
       let activePage = {...this.state.activePage};
-      let mainLeftIsOpen = {...this.state.mainLeftIsOpen};
-      let mainRightIsOpen = {...this.state.mainRightIsOpen};
+      let mainLeftWidth = {...this.state.mainLeftWidth};
+
       activePage = 'page1';
       pageContent = content[page];
-      mainLeftIsOpen = pageContent.page1.leftFullWidth;
-      mainRightIsOpen = pageContent.page1.rightFullWidth;
+      mainLeftWidth = pageContent.page1.mainLeftWidth;
+
       this.setState({
         pageContent,
-        mainLeftIsOpen,
-        mainRightIsOpen,
+        mainLeftWidth,
         activePage
       })
   }
   updateActivePage = page => {
     let pageContent = {...this.state.pageContent};
     let activePage = {...this.state.activePage};
-    let mainLeftIsOpen = {...this.state.mainLeftIsOpen};
-    let mainRightIsOpen = {...this.state.mainRightIsOpen};
+    let mainLeftWidth = {...this.state.mainLeftWidth};
 
-    mainLeftIsOpen = pageContent[page].leftFullWidth;
-    mainRightIsOpen = pageContent[page].rightFullWidth;
+
+    mainLeftWidth = pageContent[page].mainLeftWidth;
+
       activePage = page;
       this.setState({
         activePage,
-        mainLeftIsOpen,
-        mainRightIsOpen
+        mainLeftWidth,
+
       })
   }
 
@@ -89,7 +85,7 @@ class App extends Component {
         <div className="body-background-left"></div>
         <div className="body-background-right"></div>
         <TopBar />
-        <MainBody pageContent={this.state.pageContent} updateActivePage={this.updateActivePage} activePage={this.state.activePage} updatePageContent={this.updatePageContent} mainLeftIsOpen={this.state.mainLeftIsOpen} mainRightIsOpen={this.state.mainRightIsOpen}/>
+        <MainBody pageContent={this.state.pageContent} updateActivePage={this.updateActivePage} activePage={this.state.activePage} updatePageContent={this.updatePageContent} mainLeftWidth={this.state.mainLeftWidth}/>
         <SideNav pageContent={this.state.pageContent} updateActivePage={this.updateActivePage} activePage={this.state.activePage}/>
         <Footer />
       </div>

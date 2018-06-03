@@ -17,7 +17,7 @@ class SideNav extends Component {
         return (
             <div className="side-nav">
 
-                {Object.keys(this.props.pageContent).map(key => <Button className='side-nav-button__wrapper' pose={this.props.activePage === key ? 'active' : 'inactive'}><button key={key} index={key} onClick={()=> this.changeActivePage(key)}></button></Button>)}
+                {Object.keys(this.props.pageContent).map(key => <Button key={key} className='side-nav-button__wrapper' pose={this.props.activePage === key ? 'active' : 'inactive'}><button key={key} index={key} onClick={()=> this.changeActivePage(key)}></button></Button>)}
 
             </div>
         )
