@@ -1,0 +1,11 @@
+.topbar {
+    height: 75px;
+    display: flex;
+    align-items: center;
+    z-index: 1;
+    position: relative;
+    .logo {
+        height: 50px;
+        width: auto;
+    }
+}

@@ -1,0 +1,21 @@
+.side-nav {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    .side-nav-button__wrapper {
+        position: relative;
+        margin: 0.5rem 1rem;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: lighten($primary-color, 20%);
+    }
+    button {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+}

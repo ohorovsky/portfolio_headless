@@ -1,0 +1,8 @@
+.small-nav {
+    padding: $global-padding;
+    position: relative;
+    z-index: 1;
+    .small-nav__link {
+        margin-right: $global-margin;
+    }
+}
