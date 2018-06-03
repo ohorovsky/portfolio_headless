@@ -74,18 +74,28 @@ class App extends Component {
       this.setState({
         activePage,
         mainLeftWidth,
-
       })
+  }
+  updateMainLeftWidth = () => {
+    let mainLeftWidth = this.state.mainLeftWidth;
+    if(mainLeftWidth === 0){
+      mainLeftWidth = 1
+    }else{
+      mainLeftWidth = 0
+    }
+    // mainLeftWidth === 0 ? mainLeftWidth = 1 : mainLeftWidth = 0;
+    this.setState({
+      mainLeftWidth
+    })
   }
 
   render() {
-
     return (
       <div className="app__wrapper">
         <div className="body-background-left"></div>
         <div className="body-background-right"></div>
         <TopBar />
-        <MainBody pageContent={this.state.pageContent} updateActivePage={this.updateActivePage} activePage={this.state.activePage} updatePageContent={this.updatePageContent} mainLeftWidth={this.state.mainLeftWidth}/>
+        <MainBody pageContent={this.state.pageContent} updateMainLeftWidth={this.updateMainLeftWidth} updateActivePage={this.updateActivePage} activePage={this.state.activePage} updatePageContent={this.updatePageContent} mainLeftWidth={this.state.mainLeftWidth}/>
         <SideNav pageContent={this.state.pageContent} updateActivePage={this.updateActivePage} activePage={this.state.activePage}/>
         <Footer />
       </div>

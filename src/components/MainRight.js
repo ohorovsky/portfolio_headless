@@ -1,6 +1,8 @@
 import React, { Component }  from 'react';
 import posed from 'react-pose';
 
+
+
 const configBox = {
     open: {width: '100%'},
     half: { width: '50%' },
@@ -10,6 +12,7 @@ const configBox = {
 const Box = posed.div(configBox);
 
 
+
 class MainRight extends Component {
     // static propTypes = {
     //     user: PropTypes.object
@@ -17,6 +20,7 @@ class MainRight extends Component {
 
     render(){
         let poseConfig;
+
         if(this.props.mainLeftWidth === 0){
             poseConfig = 'open'
         }
@@ -31,6 +35,7 @@ class MainRight extends Component {
           };
         return (
             <Box className={`main-right`} pose={poseConfig}>
+
                 <div className="main-right__wrapper">
                     <div className="background-image" style={divStyle}></div>
                 </div>

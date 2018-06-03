@@ -26,7 +26,7 @@ const content = {
         images: {
           img1: '/img/home/2.jpg',
         },
-        mainLeftWidth: 0,
+        mainLeftWidth: 1,
 
       }
 
