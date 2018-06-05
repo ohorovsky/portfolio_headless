@@ -4,8 +4,7 @@ const content = {
         heading: "Hi there",
         paragraph: "My name is Ondrej, I'm Web Developer",
         images: {
-          img1: '',
-          img2: ''
+
         },
         mainLeftWidth: 2
 
@@ -15,7 +14,6 @@ const content = {
         paragraph: "meg megm mgegm mgemgemg megmegm",
         images: {
           img1: '/img/home/1.jpeg',
-
         },
         mainLeftWidth: 1,
 
@@ -36,8 +34,7 @@ const content = {
         heading: "Projects",
         paragraph: "meg meg",
         images: {
-          img1: '',
-          img2: ''
+
         },
         mainLeftWidth: 1,
       },
