@@ -4,5 +4,6 @@
     z-index: 1;
     .small-nav__link {
         margin-right: $global-margin;
+        display: inline-block;
     }
 }

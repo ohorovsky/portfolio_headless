@@ -83,7 +83,6 @@ class App extends Component {
     }else{
       mainLeftWidth = 0
     }
-    // mainLeftWidth === 0 ? mainLeftWidth = 1 : mainLeftWidth = 0;
     this.setState({
       mainLeftWidth
     })

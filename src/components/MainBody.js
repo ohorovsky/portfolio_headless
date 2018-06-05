@@ -29,7 +29,6 @@ class MainBody extends Component {
     render(){
         let expandBtnConfig;
         if(Object.keys(this.props.pageContent[this.props.activePage].images).length !== 0){
-            console.dir()
             if(this.props.mainLeftWidth === 0){
                 expandBtnConfig = 'open'
             }
@@ -37,7 +36,6 @@ class MainBody extends Component {
                 expandBtnConfig = 'closed'
             }
         }else{
-            console.log('no images')
             expandBtnConfig = 'hidden'
         }
 
