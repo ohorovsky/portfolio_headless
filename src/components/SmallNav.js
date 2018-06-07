@@ -1,5 +1,12 @@
 import React, { Component }  from 'react';
+import posed from 'react-pose';
 
+const configButton = {
+    active: {scale: 1.1, color: '#F9BB4C', fontWeight: 800},
+    inactive: { scale: 0.9, color: '#747474', fontWeight: 300 }
+  }
+
+const Button = posed.div(configButton);
 class SmallNav extends Component {
     // static propTypes = {
     //     user: PropTypes.object
@@ -7,31 +14,31 @@ class SmallNav extends Component {
     changePage = (page) => {
         this.props.updatePageContent(page)
     }
-    // changeActivePage = (page) => {
-    //     this.props.updateActivePage(page)
-    // }
     render(){
-
         return (
             <div className="small-nav">
-                <button
+                <Button
+                    pose={this.props.activeMainPage === 'home' ? 'active' : 'inactive'}
                     className='small-nav__link'
                     onClick={()=> {
                         this.changePage('home')
-                        //this.changeActivePage('page1')
                         }}>
                         Home
-                </button>
-                <button className='small-nav__link'>Featured</button>
-                <button
+                </Button>
+                <Button
+                    pose={this.props.activeMainPage === 'featured' ? 'active' : 'inactive'}
+                    className='small-nav__link'>Featured</Button>
+                <Button
+                    pose={this.props.activeMainPage === 'projects' ? 'active' : 'inactive'}
                     className='small-nav__link'
                     onClick={()=> {
                         this.changePage('projects')
-                        //this.changeActivePage('page1')
                         }}>
                         Projects
-                </button>
-                <button className='small-nav__link'>Contact</button>
+                </Button>
+                <Button
+                    pose={this.props.activeMainPage === 'contact' ? 'active' : 'inactive'}
+                    className='small-nav__link'>Contact</Button>
             </div>
         )
     }

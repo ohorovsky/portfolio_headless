@@ -1,6 +1,5 @@
 .main-body {
     display: flex;
     height: 65vh;
-    position: relative;
-    box-shadow: $global-box-shadow;
+    position: relative; // box-shadow: $global-box-shadow;
 }

@@ -49,7 +49,7 @@ class MainBody extends Component {
                         <path fill="#F9BB4C" d="M607.5 205.5l-178.5 178.5 178.5 178.5-45 45-178.5-178.5-178.5 178.5-45-45 178.5-178.5-178.5-178.5 45-45 178.5 178.5 178.5-178.5z"></path>
                     </svg>
                 </Wrapper>
-                <MainLeft pageContent={this.props.pageContent} updateActivePage={this.props.updateActivePage} activePage={this.props.activePage} updatePageContent={this.props.updatePageContent} mainLeftWidth={this.props.mainLeftWidth}/>
+                <MainLeft pageContent={this.props.pageContent} updateActivePage={this.props.updateActivePage} activeMainPage={this.props.activeMainPage} activePage={this.props.activePage} updatePageContent={this.props.updatePageContent} mainLeftWidth={this.props.mainLeftWidth}/>
                 <MainRight images={this.props.pageContent[this.props.activePage].images} mainLeftWidth={this.props.mainLeftWidth}/>
             </div>
         )
