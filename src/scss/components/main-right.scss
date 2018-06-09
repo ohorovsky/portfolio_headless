@@ -1,8 +1,4 @@
 .main-right {
     position: relative;
-    .main-right__wrapper {
-        position: relative;
-        height: 100%;
-        width: 100%;
-    }
+    flex: 1;
 }

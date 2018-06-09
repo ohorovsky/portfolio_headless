@@ -6,9 +6,9 @@ import posed from 'react-pose';
 
 
 const configBox = {
-    open: {width: '100%'},
-    half: { width: '50%' },
-    closed: { width: '0%' }
+    open: {flexBasis:'100%'},
+    half: { flexBasis: '50%' },
+    closed: { flexBasis: '0%' }
   }
 
 const Box = posed.div(configBox);

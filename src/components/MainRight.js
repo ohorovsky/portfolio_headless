@@ -3,13 +3,13 @@ import posed from 'react-pose';
 
 
 
-const configBox = {
-    open: {width: '100%'},
-    half: { width: '50%' },
-    closed: { width: '0%' }
-  }
+// const configBox = {
+//     open: {width: '100%'},
+//     half: { width: '50%' },
+//     closed: { width: '0%' }
+//   }
 
-const Box = posed.div(configBox);
+// const Box = posed.div(configBox);
 
 
 
@@ -21,25 +21,25 @@ class MainRight extends Component {
     render(){
         let poseConfig;
 
-        if(this.props.mainLeftWidth === 0){
-            poseConfig = 'open'
-        }
-        if(this.props.mainLeftWidth === 1){
-            poseConfig = 'half'
-        }
-        if(this.props.mainLeftWidth === 2){
-            poseConfig = 'closed'
-        }
+        // if(this.props.mainLeftWidth === 0){
+        //     poseConfig = 'open'
+        // }
+        // if(this.props.mainLeftWidth === 1){
+        //     poseConfig = 'half'
+        // }
+        // if(this.props.mainLeftWidth === 2){
+        //     poseConfig = 'closed'
+        // }
         const divStyle = {
             backgroundImage: `url(${this.props.images.img1})`
           };
         return (
-            <Box className={`main-right`} pose={poseConfig}>
+            <div className={`main-right`}>
 
-                <div className="main-right__wrapper">
+
                     <div className="background-image" style={divStyle}></div>
-                </div>
-            </Box>
+
+            </div>
         )
     }
 }
