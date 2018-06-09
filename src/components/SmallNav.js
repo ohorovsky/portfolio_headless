@@ -17,28 +17,18 @@ class SmallNav extends Component {
     render(){
         return (
             <div className="small-nav">
-                <Button
-                    pose={this.props.activeMainPage === 'home' ? 'active' : 'inactive'}
-                    className='small-nav__link'
-                    onClick={()=> {
-                        this.changePage('home')
-                        }}>
-                        Home
-                </Button>
-                <Button
-                    pose={this.props.activeMainPage === 'featured' ? 'active' : 'inactive'}
-                    className='small-nav__link'>Featured</Button>
-                <Button
-                    pose={this.props.activeMainPage === 'projects' ? 'active' : 'inactive'}
-                    className='small-nav__link'
-                    onClick={()=> {
-                        this.changePage('projects')
-                        }}>
-                        Projects
-                </Button>
-                <Button
-                    pose={this.props.activeMainPage === 'contact' ? 'active' : 'inactive'}
-                    className='small-nav__link'>Contact</Button>
+                {Object.keys(this.props.mainPageNames).map(key => {
+                    return(
+                    <Button
+                        key={key}
+                        className='small-nav__link'
+                        pose={this.props.activeMainPage === key ? 'active' : 'inactive'}
+                        onClick={()=> {
+                            this.changePage(key)
+                            }}>
+                            {this.props.mainPageNames[key]}
+                    </Button>
+                )})}
             </div>
         )
     }

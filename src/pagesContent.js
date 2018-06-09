@@ -1,4 +1,9 @@
-const content = {
+export const pageNames = {
+  home: 'Home',
+  projects: 'Projects'
+}
+
+export const content = {
     home: {
       page1: {
         heading: "Hi there",
@@ -6,8 +11,8 @@ const content = {
         images: {
 
         },
-        mainLeftWidth: 2
-
+        mainLeftWidth: 2,
+        pageName: "Home"
       },
       page2: {
         heading: "About me",
@@ -16,7 +21,7 @@ const content = {
           img1: '/img/home/1.jpeg',
         },
         mainLeftWidth: 1,
-
+        pageName: "Home"
       },
       page3: {
         heading: "My Skills",
@@ -25,7 +30,7 @@ const content = {
           img1: '/img/home/2.jpg',
         },
         mainLeftWidth: 1,
-
+        pageName: "Home"
       }
 
     },
@@ -37,9 +42,8 @@ const content = {
 
         },
         mainLeftWidth: 1,
+        pageName: "Projects"
       },
 
     }
   }
-
-  export default content;

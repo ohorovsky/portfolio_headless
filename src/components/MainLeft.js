@@ -39,7 +39,7 @@ class MainLeft extends Component {
         return (
             <Box className={`main-left`} pose={poseConfig}>
                 <div className="main-left__wrapper">
-                    <SmallNav updatePageContent={this.props.updatePageContent} updateActivePage={this.props.updateActivePage} activeMainPage={this.props.activeMainPage}/>
+                    <SmallNav updatePageContent={this.props.updatePageContent} updateActivePage={this.props.updateActivePage} activeMainPage={this.props.activeMainPage} mainPageNames={this.props.mainPageNames}/>
                     {Object.keys(this.props.pageContent).map(key => <Page key={key} className='page__wrapper' pose={this.props.activePage === key ? 'active' : 'inactive'}><PageLeft key={key} index={key} pageContent={this.props.pageContent[key]}/></Page>)}
                     <SmallFooter />
                 </div>
