@@ -6,16 +6,16 @@ import posed from 'react-pose';
 
 
 const configBox = {
-    open: {flexBasis:'100%'},
-    half: { flexBasis: '50%' },
-    closed: { flexBasis: '0%' }
+    open: {flexBasis:'100%', opacity: 1, width: 'auto'},
+    half: { flexBasis: '50%' , opacity: 1, width: 'auto'},
+    closed: { flexBasis: '0%', opacity: 0, width: 0 }
   }
 
 const Box = posed.div(configBox);
 
 const configPage = {
-    active: {opacity: 1, position: 'relative', y:0},
-    inactive: {opacity: 0, position: 'absolute', y:-50}
+    active: {opacity: 1,  y:0},
+    inactive: {opacity: 0, y:-50}
   }
 
 const Page = posed.div(configPage);

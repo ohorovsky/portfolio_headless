@@ -1,6 +1,7 @@
 .main-left {
     background-color: $white;
     position: relative;
+    overflow: hidden;
     .main-left__wrapper {
         height: 100%;
         display: flex;

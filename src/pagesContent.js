@@ -18,7 +18,10 @@ export const content = {
         heading: "About me",
         paragraph: "meg megm mgegm mgemgemg megmegm",
         images: {
-          img1: '/img/home/1.jpeg',
+          0: '/img/home/1.jpeg',
+          1: '/img/home/2.jpg',
+          2: '/img/home/3.jpg',
+          3: '/img/home/4.jpg'
         },
         mainLeftWidth: 1,
         pageName: "Home"
@@ -27,7 +30,7 @@ export const content = {
         heading: "My Skills",
         paragraph: "JS BABEL and MEG",
         images: {
-          img1: '/img/home/2.jpg',
+          0: '/img/home/2.jpg',
         },
         mainLeftWidth: 1,
         pageName: "Home"
