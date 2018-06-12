@@ -2,8 +2,8 @@ import React, { Component }  from 'react';
 import posed from 'react-pose';
 
 const configButton = {
-    active: {scale: 1.1, color: '#F9BB4C', fontWeight: 800},
-    inactive: { scale: 0.9, color: '#747474', fontWeight: 300 }
+    active: {fontSize: '19px' , color: '#4A4A4A', fontWeight: 800},
+    inactive: { fontSize: '15px' , color: '#747474', fontWeight: 300 }
   }
 
 const Button = posed.div(configButton);
@@ -17,18 +17,21 @@ class SmallNav extends Component {
     render(){
         return (
             <div className="small-nav">
-                {Object.keys(this.props.mainPageNames).map(key => {
-                    return(
-                    <Button
-                        key={key}
-                        className='small-nav__link'
-                        pose={this.props.activeMainPage === key ? 'active' : 'inactive'}
-                        onClick={()=> {
-                            this.changePage(key)
-                            }}>
-                            {this.props.mainPageNames[key]}
-                    </Button>
-                )})}
+                <div className="links__wrapper">
+                    {Object.keys(this.props.mainPageNames).map(key => {
+                        return(
+                        <Button
+                            key={key}
+                            className='small-nav__link'
+                            pose={this.props.activeMainPage === key ? 'active' : 'inactive'}
+                            onClick={()=> {
+                                this.changePage(key)
+                                }}>
+                                {this.props.mainPageNames[key]}
+                        </Button>
+                    )})}
+                </div>
+                <div className="decor-line"></div>
             </div>
         )
     }

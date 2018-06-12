@@ -1,13 +1,13 @@
 import React, { Component }  from 'react';
-import TemplateSwitch from './TemplateSwitch';
 
-
-class PageLeft extends Component {
+class Intro extends Component {
 
     render(){
+        const {heading, paragraph} = this.props.pageContent;
         return (
             <div className={`page ${this.props.isActive ? 'active' : ''}`}>
-                <TemplateSwitch pageContent={this.props.pageContent}/>
+                        <h1>{heading}</h1>
+
             </div>
         )
     }
@@ -15,4 +15,4 @@ class PageLeft extends Component {
 
 
 
-export default PageLeft;
+export default Intro;

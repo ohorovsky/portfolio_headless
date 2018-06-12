@@ -12,46 +12,15 @@ import './App.css';
 console.log(pageNames)
 
 class App extends Component {
-
-  state = {
-    posts: [],
-    mainLeftWidth: '',
-    pageContent: {},
-    activePage: '',
-    activeMainPage: '',
-    mainPageNames: {}
-  }
-
-
-  componentWillMount(){
-    //1. take a copy of the current state
-    let pageContent = {...this.state.pageContent};
-    let mainLeftWidth = {...this.state.mainLeftWidth};
-    let activePage = {...this.state.activePage};
-    let activeMainPage = {...this.state.activeMainPage};
-    let mainPageNames = {...this.state.pageNames};
-    //2. update that state
-    activePage = 'page1';
-    activeMainPage = 'home';
-    pageContent = content.home;
-    mainLeftWidth = content.home.page1.mainLeftWidth;
-    mainPageNames = pageNames
-    //3. set state
-    this.setState({
-      pageContent,
-      mainLeftWidth,
-      activeMainPage,
-      activePage,
-      mainPageNames
-    });
-    const postsURL = 'http://invizzible:8/index.php/wp-json/wp/v2/posts';
-    fetch(postsURL)
-    .then(response => response.json())
-    .then(response => {
-      this.setState({
-        posts: response
-      })
-    })
+  constructor(props) {
+    super(props)
+    this.state = {
+      activePage : 'page1',
+      activeMainPage : 'home',
+      pageContent : content.home,
+      mainLeftWidth : content.home.page1.mainLeftWidth,
+      mainPageNames : pageNames
+    }
   }
 
   updatePageContent = page => {

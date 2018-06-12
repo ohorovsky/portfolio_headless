@@ -27,22 +27,13 @@ class MainBody extends Component {
     // static propTypes = {
     //     user: PropTypes.object
     // }
-    state = {
-        activeImage: '',
-        previousImage: ''
-    }
-    componentWillMount(){
-        let activeImage = {...this.state.activeImage};
-        let previousImage = {...this.state.previousImage};
-
-        activeImage = 0;
-        previousImage = 0;
-
-        this.setState({
-            activeImage,
-            previousImage
-        })
-    }
+    constructor(props) {
+        super(props)
+        this.state = {
+            activeImage : 0,
+            previousImage : 0,
+        }
+      }
 
     changeMainLeftWidth = () => {
         this.props.updateMainLeftWidth()

@@ -3,9 +3,19 @@
     position: relative;
     z-index: 1;
     .small-nav__link {
-        margin-right: $global-margin;
+        margin-right: $global-margin*2;
         display: inline-block;
         color: $medium-gray;
         cursor: pointer;
+        // font-size: 1rem;
+    }
+    .decor-line{
+        position: absolute;
+        left: $global-padding;
+        top: 2rem;
+        margin-top: $global-margin*2;
+        height: 4px;
+        width: 100px;
+        background-color: $dark-gray;
     }
 }

@@ -6,6 +6,7 @@
 @include foundation-typography;
 @include foundation-visibility-classes;
 @import './global';
+@import './font';
 @import './components/topBar';
 @import './components/main-body';
 @import './components/main-left';
