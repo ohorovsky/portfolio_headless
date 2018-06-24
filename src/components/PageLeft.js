@@ -6,9 +6,9 @@ class PageLeft extends Component {
 
     render(){
         return (
-            <div className={`page ${this.props.isActive ? 'active' : ''}`}>
-                <TemplateSwitch pageContent={this.props.pageContent}/>
-            </div>
+
+                <TemplateSwitch pageContent={this.props.pageContent} updateActivePage={this.props.updateActivePage}/>
+
         )
     }
 }

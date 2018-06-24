@@ -13,8 +13,8 @@ const configBox = {
 const Box = posed.div(configBox);
 
 const configPage = {
-  active: { opacity: 1, y: 0 },
-  inactive: { opacity: 0, y: -50 }
+  active: { opacity: 1, y: 0, zIndex: 1 },
+  inactive: { opacity: 0, y: -50, zIndex: -1 }
 };
 
 const Page = posed.div(configPage);
@@ -44,19 +44,23 @@ class MainLeft extends Component {
             activeMainPage={this.props.activeMainPage}
             mainPageNames={this.props.mainPageNames}
           />
-          {Object.keys(this.props.pageContent).map(key => (
-            <Page
-              key={key}
-              className="page__wrapper"
-              pose={this.props.activePage === key ? "active" : "inactive"}
-            >
-              <PageLeft
+          <div className="pages__wrapper">
+            {Object.keys(this.props.pageContent).map(key => (
+              <Page
                 key={key}
-                index={key}
-                pageContent={this.props.pageContent[key]}
-              />
-            </Page>
-          ))}
+                className="page__wrapper"
+                pose={this.props.activePage === key ? "active" : "inactive"}
+              >
+                <PageLeft
+                  key={key}
+                  index={key}
+                  pageContent={this.props.pageContent[key]}
+                  updateActivePage={this.props.updateActivePage}
+                />
+              </Page>
+            ))}
+          </div>
+
           <SmallFooter />
         </div>
       </Box>

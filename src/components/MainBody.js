@@ -18,7 +18,7 @@ const ExpandBtn = posed.div(configExpandBtn);
 const Wrapper = styled(ExpandBtn)`
   position: absolute;
   top: 1rem;
-  right: 1rem;
+  right: 2rem;
   z-index: 1;
 `;
 

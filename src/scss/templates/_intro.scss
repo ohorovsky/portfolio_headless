@@ -1,0 +1,28 @@
+.intro{
+
+    .intro-top__wrapper{
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        .heading__wrapper{
+            flex-basis: 60%;
+            .page__heading{
+                @include breakpoint(xlarge up){
+                    font-size: 4.5rem;
+                }
+            }
+        }
+        .subheading__wrapper{
+            flex-basis: 40%;
+            .page__subheading{
+
+                @include breakpoint(xlarge up){
+                    font-size: 1.5rem;
+                }
+
+                transform: translateY(50%);
+            }
+        }
+
+    }
+}

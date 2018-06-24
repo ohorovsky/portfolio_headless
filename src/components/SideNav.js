@@ -1,5 +1,6 @@
 import React, { Component }  from 'react';
 import posed from 'react-pose';
+import { changeActivePage } from '../helpers';
 
 
 const configButton = {
@@ -13,11 +14,10 @@ class SideNav extends Component {
         this.props.updateActivePage(page)
     }
     render(){
-
         return (
             <div className="side-nav">
 
-                {Object.keys(this.props.pageContent).map(key => <Button key={key} className='side-nav-button__wrapper' pose={this.props.activePage === key ? 'active' : 'inactive'}><button key={key} index={key} onClick={()=> this.changeActivePage(key)}></button></Button>)}
+                {Object.keys(this.props.pageContent).map(key => <Button key={key} className='side-nav-button__wrapper' pose={this.props.activePage === key ? 'active' : 'inactive'}><button key={key} index={key} onClick={()=> changeActivePage(key, this.props)}></button></Button>)}
 
             </div>
         )
