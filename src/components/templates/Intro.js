@@ -15,8 +15,6 @@ class Intro extends Component {
                             <h2 className="page__subheading">{subheading}</h2>
                         </div>
                     </div>
-
-
                 </div>
             </div>
         )
