@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import {content, pageNames} from './pagesContent';
+import { content, pageNames } from './pagesContent';
 import TopBar from './components/TopBar';
 import SideNav from './components/SideNav';
-import MainBody from './components/MainBody';
+import MainBody from './components/MainBody/MainBody';
 import Footer from './components/Footer';
 
 import './App.css';
@@ -12,69 +12,60 @@ import './App.css';
 console.log(pageNames)
 
 class App extends Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      activePage : 'page1',
-      activeMainPage : 'home',
-      pageContent : content.home,
-      mainLeftWidth : content.home.page1.mainLeftWidth,
-      mainPageNames : pageNames
-    }
+
+  state = {
+    activePage: 'page1',
+    activeMainPage: 'home',
+    pageContent: content.home,
+    mainLeftWidth: content.home.page1.mainLeftWidth,
+    mainPageNames: pageNames
   }
+
 
   updatePageContent = page => {
-      let pageContent = {...this.state.pageContent};
-      let activePage = {...this.state.activePage};
-      let mainLeftWidth = {...this.state.mainLeftWidth};
-      let activeMainPage = {...this.state.activeMainPage};
-      activeMainPage = page;
-      activePage = 'page1';
-      pageContent = content[page];
-      mainLeftWidth = pageContent.page1.mainLeftWidth;
+    let { pageContent, activePage, mainLeftWidth, activeMainPage } = this.state
 
-      this.setState({
-        pageContent,
-        mainLeftWidth,
-        activePage,
-        activeMainPage
-      })
+    activeMainPage = page;
+    activePage = 'page1';
+    pageContent = content[page];
+    mainLeftWidth = pageContent.page1.mainLeftWidth;
+
+    this.setState({
+      pageContent,
+      mainLeftWidth,
+      activePage,
+      activeMainPage
+    })
   }
   updateActivePage = page => {
-    let pageContent = {...this.state.pageContent};
-    let activePage = {...this.state.activePage};
-    let mainLeftWidth = {...this.state.mainLeftWidth};
-
-
+    let { pageContent, activePage, mainLeftWidth } = this.state
     mainLeftWidth = pageContent[page].mainLeftWidth;
 
-      activePage = page;
-      this.setState({
-        activePage,
-        mainLeftWidth,
-      })
+    activePage = page;
+    this.setState({
+      activePage,
+      mainLeftWidth,
+    })
   }
 
   updateMainLeftWidth = () => {
-    let mainLeftWidth = this.state.mainLeftWidth;
-    if(mainLeftWidth === 0){
-      mainLeftWidth = 1
-    }else{
-      mainLeftWidth = 0
-    }
+    let { mainLeftWidth } = this.state;
+    (mainLeftWidth === 0) ? mainLeftWidth = 1 : mainLeftWidth = 0
+
     this.setState({
       mainLeftWidth
     })
   }
 
   render() {
+    const { pageContent, activeMainPage, activePage, mainLeftWidth, mainPageNames } = this.state
     return (
       <div className="app__wrapper">
         <div className="body-background-left"></div>
         <div className="body-background-right"></div>
         <TopBar />
-        <MainBody pageContent={this.state.pageContent} updateMainLeftWidth={this.updateMainLeftWidth} updateActivePage={this.updateActivePage} activeMainPage={this.state.activeMainPage} activePage={this.state.activePage} updatePageContent={this.updatePageContent} mainLeftWidth={this.state.mainLeftWidth} mainPageNames={this.state.mainPageNames}/>
-        <SideNav pageContent={this.state.pageContent} updateActivePage={this.updateActivePage} activePage={this.state.activePage}/>
+        <MainBody pageContent={pageContent} updateMainLeftWidth={this.updateMainLeftWidth} updateActivePage={this.updateActivePage} activeMainPage={activeMainPage} activePage={activePage} updatePageContent={this.updatePageContent} mainLeftWidth={mainLeftWidth} mainPageNames={mainPageNames} />
+        <SideNav pageContent={pageContent} updateActivePage={this.updateActivePage} activePage={activePage} />
         <Footer />
       </div>
     );

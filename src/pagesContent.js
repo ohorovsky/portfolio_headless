@@ -1,6 +1,7 @@
 export const pageNames = {
   home: "Home",
-  projects: "Projects"
+  projects: "Projects",
+  photography: "Photography"
 };
 
 export const content = {
@@ -13,7 +14,7 @@ export const content = {
         0: "",
         1: "",
       },
-      images: {},
+      images: [],
       mainLeftWidth: 2,
       pageName: "Home"
     },
@@ -24,12 +25,12 @@ export const content = {
         0: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum aliquet mi quis velit sollicitudin, quis pretium justo egestas. Nullam sagittis tincidunt sapien et fringilla. Cras ullamcorper hendrerit mauris at dictum. Vivamus nec sapien ac tellus dignissim malesuada eu eu leo. Aenean sollicitudin faucibus eros, ut vehicula massa pretium ultricies. Donec vel enim purus. Integer lacinia ante eu consectetur feugiat.",
         1: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum aliquet mi quis velit sollicitudin, quis pretium justo egestas. Nullam sagittis tincidunt sapien et fringilla. Cras ullamcorper hendrerit mauris at dictum. Vivamus nec sapien ac tellus dignissim malesuada eu eu leo. Aenean sollicitudin.",
       },
-      images: {
-        0: "/img/home/1.jpeg",
-        1: "/img/home/2.jpg",
-        2: "/img/home/3.jpg",
-        3: "/img/home/4.jpg"
-      },
+      images: [
+        "/img/home/1.jpeg",
+        "/img/home/2.jpg",
+        "/img/home/3.jpg",
+        "/img/home/4.jpg"
+      ],
       mainLeftWidth: 1,
       pageName: "Home"
     },
@@ -40,9 +41,9 @@ export const content = {
         0: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum aliquet mi quis velit sollicitudin, quis pretium justo egestas. Nullam sagittis tincidunt sapien et fringilla. Cras ullamcorper hendrerit mauris at dictum. Vivamus nec sapien ac tellus dignissim malesuada eu eu leo. Aenean sollicitudin faucibus eros, ut vehicula massa pretium ultricies. Donec vel enim purus. Integer lacinia ante eu consectetur feugiat.",
         1: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum aliquet mi quis velit sollicitudin, quis pretium justo egestas. Nullam sagittis tincidunt sapien et fringilla. Cras ullamcorper hendrerit mauris at dictum. Vivamus nec sapien ac tellus dignissim malesuada eu eu leo. Aenean sollicitudin.",
       },
-      images: {
-        0: "/img/home/2.jpg"
-      },
+      images: [
+        "/img/home/2.jpg"
+      ],
       mainLeftWidth: 1,
       pageName: "Home"
     }
@@ -54,22 +55,23 @@ export const content = {
       paragraphs: {
         0: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum aliquet mi quis velit sollicitudin, quis pretium justo egestas. Nullam sagittis tincidunt sapien et fringilla. Cras ullamcorper hendrerit mauris at dictum. Vivamus nec sapien ac tellus dignissim malesuada eu eu leo. Aenean sollicitudin faucibus eros, ut vehicula massa pretium ultricies. Donec vel enim purus. Integer lacinia ante eu consectetur feugiat.",
       },
-      projects: {
-        0: {
+      projects: [
+        {
           pageRef: 'page2', //this is reference for onClick event so it will change page like sidebar menu dots...
           name: "Project 1",
           paragraph: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum aliquet mi quis velit sollicitudin, quis pretium justo egestas. Nullam sagittis tincidunt sapien et fringilla. Cras ullamcorper hendrerit mauris at dictum. Vivamus nec sapien ac tellus dignissim malesuada eu eu leo. Aenean sollicitudin faucibus eros, ut vehicula massa pretium ultricies. Donec vel enim purus. Integer lacinia ante eu consectetur feugiat.",
           image: '/img/home/4.jpg',
           link: 'http://www.google.com'
         },
-        1: {
+        {
+          pageRef: 'page3',
           name: "Project 2",
           paragraph: " Meg Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum aliquet mi quis velit sollicitudin, quis pretium justo egestas. Nullam sagittis tincidunt sapien et fringilla. Cras ullamcorper hendrerit mauris at dictum. Vivamus nec sapien ac tellus dignissim malesuada eu eu leo. Aenean sollicitudin faucibus eros, ut vehicula massa pretium ultricies. Donec vel enim purus. Integer lacinia ante eu consectetur feugiat.",
           image: '/img/home/3.jpg',
           link: 'http://www.youtube.com'
         }
-      },
-      images: {},
+      ],
+      images: [],
       mainLeftWidth: 2,
       pageName: "Projects"
     },
@@ -79,9 +81,9 @@ export const content = {
       paragraphs: {
         0: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum aliquet mi quis velit sollicitudin, quis pretium justo egestas. Nullam sagittis tincidunt sapien et fringilla. Cras ullamcorper hendrerit mauris at dictum. Vivamus nec sapien ac tellus dignissim malesuada eu eu leo. Aenean sollicitudin faucibus eros, ut vehicula massa pretium ultricies. Donec vel enim purus. Integer lacinia ante eu consectetur feugiat.",
       },
-      images: {
-        0: '/img/home/4.jpg'
-      },
+      images: [
+        '/img/home/4.jpg'
+      ],
       mainLeftWidth: 1,
       pageName: "Projects"
     },
@@ -91,13 +93,33 @@ export const content = {
       paragraphs: {
         0: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum aliquet mi quis velit sollicitudin, quis pretium justo egestas. Nullam sagittis tincidunt sapien et fringilla. Cras ullamcorper hendrerit mauris at dictum. Vivamus nec sapien ac tellus dignissim malesuada eu eu leo. Aenean sollicitudin faucibus eros, ut vehicula massa pretium ultricies. Donec vel enim purus. Integer lacinia ante eu consectetur feugiat.",
       },
-      images: {
-        0: '/img/home/3.jpg'
-      },
+      images: [
+        '/img/home/3.jpg'
+      ],
       mainLeftWidth: 1,
       pageName: "Projects"
     }
   },
-
-
+  photography: {
+    page1: {
+      template: 'photography',
+      heading: "Photography",
+      paragraphs: {
+        0: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum aliquet mi quis velit sollicitudin, quis pretium justo egestas. Nullam sagittis tincidunt sapien et fringilla. Cras ullamcorper hendrerit mauris at dictum. Vivamus nec sapien ac tellus dignissim malesuada eu eu leo. Aenean sollicitudin faucibus eros, ut vehicula massa pretium ultricies. Donec vel enim purus. Integer lacinia ante eu consectetur feugiat.",
+      },
+      photos: [
+        {
+          filter: 'Portraits',
+          image: '/img/home/4.jpg',
+        },
+        {
+          filter: 'Portraits',
+          image: '/img/home/4.jpg',
+        },
+      ],
+      images: [],
+      mainLeftWidth: 2,
+      pageName: "Photography"
+    }
+  },
 };

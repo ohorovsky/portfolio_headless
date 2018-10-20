@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import styled from 'styled-components';
 // import PropTypes from 'prop-types';
 
@@ -11,8 +11,7 @@ class TopBar extends Component {
     //     user: PropTypes.object
     // }
 
-    render(){
-
+    render() {
         return (
             <div className="columns small-12 medium-11 medium-centered topbar">
                 <img className="logo" src="/img/logo.png" alt="Invizzible Music logo" />
