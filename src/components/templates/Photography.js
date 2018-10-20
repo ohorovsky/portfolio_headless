@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import Gallery from 'react-grid-gallery';
-import Lightbox from 'react-images';
 
 export default class Photography extends Component {
     static propTypes = {
@@ -14,7 +13,7 @@ export default class Photography extends Component {
     render() {
         const { heading, paragraphs, photos } = this.props.pageContent;
         return (
-            <div className={`page projects`}>
+            <div className={`page photography`}>
                 <div className="small-12 medium-10 medium-centered">
                     <div className="heading__wrapper">
                         <h1 className="page__heading">{heading}</h1>
@@ -26,16 +25,7 @@ export default class Photography extends Component {
                             </div>
                         )
                     })}
-                    <Lightbox
-                        images={[
-                            { src: '/img/home/4.jpg' },
-                            { src: '/img/home/4.jpg' }
-                        ]}
-                        isOpen={this.state.lightboxIsOpen}
-                        onClickPrev={this.gotoPrevLightboxImage}
-                        onClickNext={this.gotoNextLightboxImage}
-                        onClose={this.closeLightbox}
-                    />
+                    <Gallery images={photos} />
 
                 </div>
             </div>

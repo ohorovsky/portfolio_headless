@@ -31,6 +31,8 @@ class MainRight extends Component {
         carouselDirection: '+',
     }
 
+
+
     render() {
         const { images, activeImage, carouselDirection } = this.props;
 

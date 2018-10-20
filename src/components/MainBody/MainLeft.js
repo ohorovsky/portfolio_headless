@@ -44,17 +44,16 @@ class MainLeft extends Component {
           />
           <div className="pages__wrapper">
             <PoseGroup animateOnMount>
-              {Object.keys(pageContent).map(key => {
-                if (activePage == key) {
+              {pageContent.map((key, index) => {
+                if (activePage == index) {
                   return (
                     <Page
-                      key={key}
+                      key={index}
                       className="page__wrapper"
                     >
                       <PageLeft
-                        key={key}
-                        index={key}
-                        pageContent={pageContent[key]}
+                        index={index}
+                        pageContent={pageContent[index]}
                         updateActivePage={updateActivePage}
                       />
                     </Page>

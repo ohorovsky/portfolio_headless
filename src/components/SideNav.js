@@ -14,11 +14,11 @@ class SideNav extends Component {
         this.props.updateActivePage(page)
     }
     render() {
-        const { activePage, updateActivePage } = this.props;
+        const { pageContent, activePage, updateActivePage } = this.props;
         return (
             <div className="side-nav">
 
-                {Object.keys(this.props.pageContent).map(key => <Button key={key} className='side-nav-button__wrapper' pose={activePage === key ? 'active' : 'inactive'}><button key={key} index={key} onClick={() => changeActivePage(key, this.props)}></button></Button>)}
+                {pageContent.map((key, index) => <Button key={index} className='side-nav-button__wrapper' pose={activePage === index ? 'active' : 'inactive'}><button onClick={() => changeActivePage(index, this.props)}></button></Button>)}
 
             </div>
         )

@@ -14,10 +14,10 @@ console.log(pageNames)
 class App extends Component {
 
   state = {
-    activePage: 'page1',
+    activePage: 0,
     activeMainPage: 'home',
     pageContent: content.home,
-    mainLeftWidth: content.home.page1.mainLeftWidth,
+    mainLeftWidth: content.home[0].mainLeftWidth,
     mainPageNames: pageNames
   }
 
@@ -26,9 +26,9 @@ class App extends Component {
     let { pageContent, activePage, mainLeftWidth, activeMainPage } = this.state
 
     activeMainPage = page;
-    activePage = 'page1';
+    activePage = 0;
     pageContent = content[page];
-    mainLeftWidth = pageContent.page1.mainLeftWidth;
+    mainLeftWidth = pageContent[0].mainLeftWidth;
 
     this.setState({
       pageContent,
@@ -64,8 +64,20 @@ class App extends Component {
         <div className="body-background-left"></div>
         <div className="body-background-right"></div>
         <TopBar />
-        <MainBody pageContent={pageContent} updateMainLeftWidth={this.updateMainLeftWidth} updateActivePage={this.updateActivePage} activeMainPage={activeMainPage} activePage={activePage} updatePageContent={this.updatePageContent} mainLeftWidth={mainLeftWidth} mainPageNames={mainPageNames} />
-        <SideNav pageContent={pageContent} updateActivePage={this.updateActivePage} activePage={activePage} />
+        <MainBody
+          pageContent={pageContent}
+          activePage={activePage}
+          updateMainLeftWidth={this.updateMainLeftWidth}
+          updateActivePage={this.updateActivePage}
+          activeMainPage={activeMainPage}
+          activePage={activePage}
+          updatePageContent={this.updatePageContent}
+          mainLeftWidth={mainLeftWidth}
+          mainPageNames={mainPageNames}
+        />
+        {pageContent.length > 1 && (
+          <SideNav pageContent={pageContent} updateActivePage={this.updateActivePage} activePage={activePage} />
+        )}
         <Footer />
       </div>
     );
