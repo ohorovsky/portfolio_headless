@@ -4,7 +4,6 @@ import TopBar from './components/TopBar';
 import SideNav from './components/SideNav';
 import MainBody from './components/MainBody/MainBody';
 import Footer from './components/Footer';
-
 import './App.css';
 
 

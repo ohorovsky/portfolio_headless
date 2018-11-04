@@ -11,7 +11,6 @@ class TemplateSwitch extends Component {
         photography: Photography
     }
     render() {
-        console.log(this.props)
         const Template = this.templates[this.props.pageContent.template || 'intro'];
         return <Template {...this.props} />
     }

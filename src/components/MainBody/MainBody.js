@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import styled from 'styled-components';
-import posed from 'react-pose';
 import MainLeft from './MainLeft';
 import MainRight from './MainRight';
 import ExpandBtn from './ExpandBtn';
@@ -19,7 +17,7 @@ class MainBody extends Component {
 
 
     componentDidUpdate = (prevProps, prevState) => {
-        const { pageContent, activePage, activeImage } = this.props;
+        const { pageContent, activePage } = this.props;
         const imageCount = pageContent[activePage].images.length
         prevState.imageCount !== imageCount ? this.setState({ imageCount }) : null
         // this is to make sure that activeImage will reset on change page

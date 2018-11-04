@@ -23,10 +23,31 @@ class MainLeft extends Component {
   //     user: PropTypes.object
   // }
 
+  state = {
+    animationFinished: true,
+  }
+
+  componentDidUpdate = (prevProps, prevState) => {
+    if (prevProps.mainLeftWidth !== this.props.mainLeftWidth) {
+      this.setState({
+        animationFinished: false
+      })
+    }
+  }
+
+
+  updateAnimationStatus = (bool) => {
+    let { animationFinished } = this.state;
+    animationFinished = bool;
+    this.setState({
+      animationFinished
+    })
+  }
 
 
 
   render() {
+    const { animationFinished } = this.state;
     const { pageContent, activePage, updatePageContent, updateActivePage, activeMainPage, mainPageNames, mainLeftWidth } = this.props
     let boxPoseConfig;
     mainLeftWidth === 0 ? boxPoseConfig = "closed" : null
@@ -34,7 +55,7 @@ class MainLeft extends Component {
     mainLeftWidth === 2 ? boxPoseConfig = "open" : null
 
     return (
-      <Box className={`main-left`} pose={boxPoseConfig}>
+      <Box className={`main-left`} pose={boxPoseConfig} onPoseComplete={() => this.updateAnimationStatus(true)}>
         <div className="main-left__wrapper">
           <SmallNav
             updatePageContent={updatePageContent}
@@ -55,6 +76,7 @@ class MainLeft extends Component {
                         index={index}
                         pageContent={pageContent[index]}
                         updateActivePage={updateActivePage}
+                        animationFinished={animationFinished}
                       />
                     </Page>
                   )

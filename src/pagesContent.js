@@ -107,87 +107,59 @@ export const content = {
       paragraphs: {
         0: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum aliquet mi quis velit sollicitudin, quis pretium justo egestas. Nullam sagittis tincidunt sapien et fringilla. Cras ullamcorper hendrerit mauris at dictum. Vivamus nec sapien ac tellus dignissim malesuada eu eu leo. Aenean sollicitudin faucibus eros, ut vehicula massa pretium ultricies. Donec vel enim purus. Integer lacinia ante eu consectetur feugiat.",
       },
-      photos: [{
-        src: "https://c2.staticflickr.com/9/8817/28973449265_07e3aa5d2e_b.jpg",
-        thumbnail: "https://c2.staticflickr.com/9/8817/28973449265_07e3aa5d2e_n.jpg",
-        thumbnailWidth: 320,
-        thumbnailHeight: 174,
-        caption: "After Rain (Jeshu John - designerspics.com)"
-      },
-      {
-        src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
-        thumbnail: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_n.jpg",
-        thumbnailWidth: 320,
-        thumbnailHeight: 212,
-        caption: "Boats (Jeshu John - designerspics.com)"
-      },
-
-      {
-        src: "https://c4.staticflickr.com/9/8887/28897124891_98c4fdd82b_b.jpg",
-        thumbnail: "https://c4.staticflickr.com/9/8887/28897124891_98c4fdd82b_n.jpg",
-        thumbnailWidth: 320,
-        thumbnailHeight: 212
-      }, {
-        src: "https://c2.staticflickr.com/9/8817/28973449265_07e3aa5d2e_b.jpg",
-        thumbnail: "https://c2.staticflickr.com/9/8817/28973449265_07e3aa5d2e_n.jpg",
-        thumbnailWidth: 320,
-        thumbnailHeight: 174,
-        caption: "After Rain (Jeshu John - designerspics.com)"
-      },
-      {
-        src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
-        thumbnail: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_n.jpg",
-        thumbnailWidth: 320,
-        thumbnailHeight: 212,
-        caption: "Boats (Jeshu John - designerspics.com)"
-      },
-
-      {
-        src: "https://c4.staticflickr.com/9/8887/28897124891_98c4fdd82b_b.jpg",
-        thumbnail: "https://c4.staticflickr.com/9/8887/28897124891_98c4fdd82b_n.jpg",
-        thumbnailWidth: 320,
-        thumbnailHeight: 212
-      }, {
-        src: "https://c2.staticflickr.com/9/8817/28973449265_07e3aa5d2e_b.jpg",
-        thumbnail: "https://c2.staticflickr.com/9/8817/28973449265_07e3aa5d2e_n.jpg",
-        thumbnailWidth: 320,
-        thumbnailHeight: 174,
-        caption: "After Rain (Jeshu John - designerspics.com)"
-      },
-      {
-        src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
-        thumbnail: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_n.jpg",
-        thumbnailWidth: 320,
-        thumbnailHeight: 212,
-        caption: "Boats (Jeshu John - designerspics.com)"
-      },
-
-      {
-        src: "https://c4.staticflickr.com/9/8887/28897124891_98c4fdd82b_b.jpg",
-        thumbnail: "https://c4.staticflickr.com/9/8887/28897124891_98c4fdd82b_n.jpg",
-        thumbnailWidth: 320,
-        thumbnailHeight: 212
-      }, {
-        src: "https://c2.staticflickr.com/9/8817/28973449265_07e3aa5d2e_b.jpg",
-        thumbnail: "https://c2.staticflickr.com/9/8817/28973449265_07e3aa5d2e_n.jpg",
-        thumbnailWidth: 320,
-        thumbnailHeight: 174,
-        caption: "After Rain (Jeshu John - designerspics.com)"
-      },
-      {
-        src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
-        thumbnail: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_n.jpg",
-        thumbnailWidth: 320,
-        thumbnailHeight: 212,
-        caption: "Boats (Jeshu John - designerspics.com)"
-      },
-
-      {
-        src: "https://c4.staticflickr.com/9/8887/28897124891_98c4fdd82b_b.jpg",
-        thumbnail: "https://c4.staticflickr.com/9/8887/28897124891_98c4fdd82b_n.jpg",
-        thumbnailWidth: 320,
-        thumbnailHeight: 212
-      },],
+      filter: [
+        'people', 'landscape', 'longExposures'
+      ],
+      photos: [
+        {
+          src: "/img/home/4.jpg",
+          filter: "portraits",
+        },
+        {
+          src: "/img/home/2.jpg",
+          filter: "landscape",
+        },
+        {
+          src: "/img/home/1.jpg",
+          filter: "longExposures",
+        },
+        {
+          src: "/img/home/4.jpg",
+          filter: "portraits",
+        },
+        {
+          src: "/img/home/2.jpg",
+          filter: "landscape",
+        },
+        {
+          src: "/img/home/1.jpg",
+          filter: "longExposures",
+        },
+        {
+          src: "/img/home/4.jpg",
+          filter: "portraits",
+        },
+        {
+          src: "/img/home/2.jpg",
+          filter: "landscape",
+        },
+        {
+          src: "/img/home/1.jpg",
+          filter: "longExposures",
+        },
+        {
+          src: "/img/home/4.jpg",
+          filter: "portraits",
+        },
+        {
+          src: "/img/home/2.jpg",
+          filter: "landscape",
+        },
+        {
+          src: "/img/home/1.jpg",
+          filter: "longExposures",
+        }
+      ],
       images: [],
       mainLeftWidth: 2,
       pageName: "Photography"

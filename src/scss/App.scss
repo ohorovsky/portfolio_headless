@@ -5,6 +5,8 @@
 @include foundation-grid;
 @include foundation-typography;
 @include foundation-visibility-classes;
+@import "../../node_modules/lightgallery.js/dist/css/lightgallery.min.css";
+@import "../../node_modules/lightgallery.js/dist/css/lg-transitions.min.css";
 @import './global';
 @import './font';
 @import './components/topBar';
