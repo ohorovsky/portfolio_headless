@@ -6,11 +6,14 @@ class PageLeft extends Component {
 
     render() {
         const { pageContent, updateActivePage, animationFinished } = this.props
-        return (
+        if (animationFinished) {
+            return (
 
-            <TemplateSwitch pageContent={pageContent} updateActivePage={updateActivePage} animationFinished={animationFinished} />
+                <TemplateSwitch pageContent={pageContent} updateActivePage={updateActivePage} animationFinished={animationFinished} />
 
-        )
+            )
+        }
+        return <p>loading</p>
     }
 }
 

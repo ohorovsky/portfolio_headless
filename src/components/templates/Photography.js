@@ -3,9 +3,13 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import StackGrid, { transitions } from 'react-stack-grid';
+import pose from 'react-pose';
 import 'lightgallery.js';
 
-
+const Button = pose.button({
+    active: { fontSize: '19px', color: '#4A4A4A', fontWeight: 800 },
+    inactive: { fontSize: '15px', color: '#747474', fontWeight: 300 }
+})
 export default class Photography extends Component {
     static propTypes = {
         prop: PropTypes
@@ -37,7 +41,7 @@ export default class Photography extends Component {
                 });
             }, 100)
         }
-        console.log(this.props.animationFinished)
+
         // only create new lightgallery when filter was changed
         if (prevState.activeFilter !== this.state.activeFilter) {
             const selector =
@@ -68,93 +72,70 @@ export default class Photography extends Component {
     render() {
         const { activeFilter, galleryWidth } = this.state;
         const { pageContent, animationFinished } = this.props;
-        const { heading, paragraphs, filter, photos } = pageContent;
+        const { heading, filter, photos } = pageContent;
 
         const { scaleDown } = transitions;
-        if (animationFinished) {
-            return (
-                <div className={`page photography`}>
-                    <div className="small-12 medium-10 medium-centered">
-                        <div className="heading__wrapper">
-                            <h1 className="page__heading">{heading}</h1>
-                        </div>
-                        <div>
-                            <button type="button" className="filter-item" onClick={() => this.filterChange('all')}>
-                                <span>All</span>
-                            </button>
-                            {filter.map((filterType, index) => (
-                                <button key={(index)} type="button" className="filter-item" onClick={() => this.filterChange(filterType)}>
-                                    <span>{filterType}</span>
-                                </button>
-                            ))}
-                        </div>
-                        {Object.keys(paragraphs).map(key => {
-                            return (
-                                <div key={key} className="small-12 medium-10 medium-centered paragraph__wrapper">
-                                    <p className="page__paragraph">{paragraphs[key]}</p>
-                                </div>
-                            )
-                        })}
-                        <div id="lightgallery" ref={this.gallery}>
-                            <StackGrid
-                                monitorImagesLoaded
-                                columnWidth={galleryWidth <= 768 ? '100%' : '25%'}
-                                appear={scaleDown.appear}
-                                appeared={scaleDown.appeared}
-                                enter={scaleDown.enter}
-                                entered={scaleDown.entered}
-                                leaved={scaleDown.leaved}
-                                easing="cubic-bezier(0.86, 0, 0.07, 1)"
-                            >
-                                {photos.map((photo, index) => {
-                                    const path = photo.src;
-                                    const filter = photo.filter;
+
+        return (
+            <div className={`page photography`}>
+                <div className="small-12 medium-10 medium-centered">
+                    <div className="heading__wrapper">
+                        <h1 className="page__heading">{heading}</h1>
+                    </div>
+                    <div className="filter__wrapper">
+                        <Button pose={activeFilter == 'all' ? 'active' : 'inactive'} type="button" className="filter-item" onClick={() => this.filterChange('all')}>
+                            <span>All</span>
+                        </Button>
+                        {filter.map((filterType, index) => (
+                            <Button pose={activeFilter == filterType ? 'active' : 'inactive'} key={(index)} type="button" className="filter-item" onClick={() => this.filterChange(filterType)}>
+                                <span>{filterType}</span>
+                            </Button>
+                        ))}
+                    </div>
+
+                    <div id="lightgallery" ref={this.gallery}>
+                        <StackGrid
+                            monitorImagesLoaded
+                            columnWidth={galleryWidth <= 768 ? '100%' : '25%'}
+                            appear={scaleDown.appear}
+                            appeared={scaleDown.appeared}
+                            enter={scaleDown.enter}
+                            entered={scaleDown.entered}
+                            leaved={scaleDown.leaved}
+                            easing="cubic-bezier(0.86, 0, 0.07, 1)"
+                        >
+                            {photos.map((photo, index) => {
+                                const path = photo.src;
+                                const filter = photo.filter;
 
 
-                                    if (filter == activeFilter) {
-                                        return (
-                                            <a
-                                                key={`gallery-item-${index}`}
-                                                className={`gallery-item gallery-item-type-${filter}`}
-                                                href={path}
-                                                data-src={path}
-                                            >
-                                                <img src={path} alt={filter} />
-                                            </a>
-                                        );
-                                    }
-                                    if (activeFilter == 'all') {
+                                if (filter == activeFilter) {
+                                    return (
+                                        <a
+                                            key={`gallery-item-${index}`}
+                                            className={`gallery-item gallery-item-type-${filter}`}
+                                            href={path}
+                                            data-src={path}
+                                        >
+                                            <img src={path} alt={filter} />
+                                        </a>
+                                    );
+                                }
+                                if (activeFilter == 'all') {
 
-                                        return (
-                                            <a key={index} className="gallery-item gallery-item-type-all " href={path} data-src={path}>
-                                                <img src={path} alt={filter} />
-                                            </a>
-                                        );
-                                    }
-                                })}
-                            </StackGrid>
-                        </div>
+                                    return (
+                                        <a key={index} className="gallery-item gallery-item-type-all " href={path} data-src={path}>
+                                            <img src={path} alt={filter} />
+                                        </a>
+                                    );
+                                }
+                            })}
+                        </StackGrid>
                     </div>
                 </div>
-            )
+            </div>
+        )
 
-        }
-        return <p>loading</p>
+
     }
 }
-
-{/* <Gallery images={photos} /> */ }
-
-// <div className="small-12 medium-10 medium-centered thumbnails__wrapper columns">
-//                         {photos.map(photo => {
-//                             return (
-//                                 <div>
-//                                     <div key={photo} className="small-12 medium-10 medium-centered project-thumbnail">
-//                                         <img class="image" src={photo.image} alt="" />
-
-//                                     </div>
-
-//                                 </div>
-//                             )
-//                         })}
-//                     </div>
