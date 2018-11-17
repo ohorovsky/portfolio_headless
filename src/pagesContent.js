@@ -1,7 +1,8 @@
 export const pageNames = {
   home: "Home",
   projects: "Projects",
-  photography: "Photography"
+  photography: "Photography",
+  contact: "Contact"
 };
 
 export const content = {
@@ -163,6 +164,14 @@ export const content = {
       images: [],
       mainLeftWidth: 2,
       pageName: "Photography"
+    }
+  ],
+  contact: [
+    {
+      template: 'contact',
+      heading: "Contact",
+      subheading: "If you want me to help you creating something awesome or simply wanna say hi, feel free to do so!",
+      mainLeftWidth: 2,
     }
   ],
 };

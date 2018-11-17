@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types'
 import MainLeft from './MainLeft';
 import MainRight from './MainRight';
 import ExpandBtn from './ExpandBtn';
@@ -6,9 +7,9 @@ import ImgArrows from './ImgArrows';
 
 
 class MainBody extends Component {
-    // static propTypes = {
-    //     user: PropTypes.object
-    // }
+    static propTypes = {
+        user: PropTypes.object
+    }
     state = {
         activeImage: 0,
         imageCount: 0,
@@ -18,7 +19,7 @@ class MainBody extends Component {
 
     componentDidUpdate = (prevProps, prevState) => {
         const { pageContent, activePage } = this.props;
-        const imageCount = pageContent[activePage].images.length
+        const imageCount = pageContent[activePage].images ? pageContent[activePage].images.length : 0
         prevState.imageCount !== imageCount ? this.setState({ imageCount }) : null
         // this is to make sure that activeImage will reset on change page
         prevProps.activePage !== activePage ? this.setState({ activeImage: 0 }) : null
@@ -78,4 +79,3 @@ class MainBody extends Component {
 
 
 export default MainBody;
-

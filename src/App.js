@@ -20,6 +20,14 @@ class App extends Component {
     mainPageNames: pageNames
   }
 
+  componentDidMount = () => {
+
+    const page = this.props.location.pathname.substr(1)
+    console.log(page)
+    this.updatePageContent(page)
+  }
+
+
 
   updatePageContent = page => {
     let { pageContent, activePage, mainLeftWidth, activeMainPage } = this.state

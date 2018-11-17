@@ -45,3 +45,14 @@
 
     }
 }
+
+.rect-button{
+    padding: $global-padding $global-padding * 2;
+    border: none;
+    background: $primary-color;
+    font-weight: bold;
+    cursor: pointer;
+    display: inline-block;
+    text-transform: uppercase;
+    font-family: $header-font-family;
+}
