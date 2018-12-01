@@ -34,15 +34,17 @@ class App extends Component {
 
     activeMainPage = page;
     activePage = 0;
-    pageContent = content[page];
-    mainLeftWidth = pageContent[0].mainLeftWidth;
+    pageContent = content[page] ? content[page] : null;
+    if (pageContent) {
+      mainLeftWidth = pageContent[0].mainLeftWidth;
 
-    this.setState({
-      pageContent,
-      mainLeftWidth,
-      activePage,
-      activeMainPage
-    })
+      this.setState({
+        pageContent,
+        mainLeftWidth,
+        activePage,
+        activeMainPage
+      })
+    }
   }
   updateActivePage = page => {
     let { pageContent, activePage, mainLeftWidth } = this.state
