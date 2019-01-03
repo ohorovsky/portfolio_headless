@@ -63,5 +63,16 @@
                 }
             }
         }
+        @include breakpoint(medium down){
+            flex-direction: column;
+            .contact-right{
+                .contact-icons{
+                    display: block;
+                    .icon__wrapper{
+                        margin: $global-margin 0;
+                    }
+                }
+            }
+        }
     }
 }

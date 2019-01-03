@@ -36,7 +36,7 @@ export default class ExpandBtn extends Component {
             expandBtnConfig = 'hidden'
         }
         return (
-            <Wrapper pose={expandBtnConfig} onClick={updateMainLeftWidth}>
+            <Wrapper pose={expandBtnConfig} onClick={updateMainLeftWidth} className="show-for-large">
                 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 768 768">
                     <title></title>
                     <g id="icomoon-ignore">

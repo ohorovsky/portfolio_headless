@@ -42,10 +42,17 @@
         top: 0;
         left: 0;
         padding: $global-padding;
-
+        @include breakpoint(medium down){
+            position: relative;
+            padding-left: 0;
+        }
     }
 }
-
+button{
+    &:focus{
+        outline-color: $primary-color;
+    }
+}
 .rect-button{
     padding: $global-padding $global-padding * 2;
     border: none;

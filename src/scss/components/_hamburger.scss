@@ -1,0 +1,30 @@
+.hamburger__wrapper{
+    position: relative;
+    z-index: 10;
+    .hamburger{
+        display: flex;
+        flex-direction: column;
+        margin-left: auto;
+        justify-content: center;
+        .bar{
+            height: 5px;
+            width: 35px;
+            border-radius: 5px;
+            background: $white;
+            margin: 3px 0;
+        }
+        &.type-1{
+
+        }
+    }
+    .close__wrapper{
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        svg{
+            margin-right: 1rem;
+            width: 25px;
+            height: 25px;
+        }
+    }
+}

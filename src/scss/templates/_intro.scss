@@ -2,27 +2,29 @@
 
     .intro-top__wrapper{
         display: flex;
-        align-items: flex-end;
         justify-content: center;
         .heading__wrapper{
             flex-basis: 60%;
             .page__heading{
                 @include breakpoint(xlarge up){
-                    font-size: 4.5rem;
+                    font-size: 4rem;
                 }
             }
         }
         .subheading__wrapper{
             flex-basis: 40%;
+            align-self: flex-end;
             .page__subheading{
 
-                @include breakpoint(xlarge up){
-                    font-size: 1.5rem;
-                }
+                // @include breakpoint(large up){
+                //     font-size: 1.5rem;
+                // }
 
                 transform: translateY(50%);
             }
         }
-
+        @include breakpoint(medium down){
+            flex-direction: column;
+        }
     }
 }

@@ -55,7 +55,9 @@ class MainBody extends Component {
         return (
             <div className='main-body columns small-12 medium-11 medium-centered'>
                 <ExpandBtn imageCount={imageCount} mainLeftWidth={mainLeftWidth} updateMainLeftWidth={updateMainLeftWidth} />
-                <ImgArrows nextImage={this.nextImage} prevImage={this.prevImage} imageCount={imageCount} />
+                <div className="show-for-large">
+                    <ImgArrows nextImage={this.nextImage} prevImage={this.prevImage} imageCount={imageCount} />
+                </div>
                 <MainLeft
                     pageContent={pageContent}
                     updateActivePage={updateActivePage}
@@ -70,6 +72,7 @@ class MainBody extends Component {
                     carouselDirection={carouselDirection}
                     activeImage={this.state.activeImage}
                     previousImage={this.state.previousImage}
+                    nextImage={this.nextImage} prevImage={this.prevImage} imageCount={imageCount}
                 />
             </div>
         )

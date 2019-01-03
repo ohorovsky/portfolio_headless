@@ -84,7 +84,9 @@ class MainLeft extends Component {
               })}
             </PoseGroup>
           </div>
-          <SmallFooter />
+          <div className="show-for-large">
+            <SmallFooter />
+          </div>
         </div>
       </Box>
     );

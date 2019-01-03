@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import posed from 'react-pose';
 
+
 const configButton = {
     active: { fontSize: '19px', color: '#4A4A4A', fontWeight: 800 },
     inactive: { fontSize: '15px', color: '#747474', fontWeight: 300 }
@@ -17,7 +18,7 @@ class SmallNav extends Component {
     }
     render() {
         return (
-            <div className="small-nav">
+            <div className="show-for-large small-nav">
                 <div className="links__wrapper">
                     {Object.keys(this.props.mainPageNames).map(key => {
                         return (

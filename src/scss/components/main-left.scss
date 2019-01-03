@@ -12,4 +12,8 @@
             padding: $global-padding;
         }
     }
+    @include breakpoint(medium down){
+
+        overflow: visible;
+    }
 }

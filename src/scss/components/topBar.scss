@@ -1,11 +1,14 @@
 .topbar {
-    height: 75px;
-    display: flex;
-    align-items: center;
-    z-index: 1;
     position: relative;
+    z-index: 11;
     .logo {
         height: 35px;
         width: auto;
+        position: fixed;
+        margin: 1rem;
+        @include breakpoint(medium down){
+           margin-left: 0;
+        }
     }
+
 }

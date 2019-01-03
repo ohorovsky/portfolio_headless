@@ -2,4 +2,16 @@
     position: relative;
     flex: 1;
     overflow: hidden;
+
+    @include breakpoint(medium down){
+        .img-buttons__wrapper {
+            top: unset;
+            bottom: 0.5rem;
+        }
+        overflow: visible;
+        .background-image{
+            height: 300px;
+            position: relative;
+        }
+    }
 }

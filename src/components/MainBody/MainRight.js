@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import posed, { PoseGroup } from 'react-pose';
 import PropTypes from 'prop-types'
+import ImgArrows from './ImgArrows';
 
 const configImg = {
     enter: {
@@ -34,7 +35,7 @@ class MainRight extends Component {
 
 
     render() {
-        const { images, activeImage, carouselDirection } = this.props;
+        const { images, activeImage, carouselDirection, nextImage, prevImage, imageCount } = this.props;
 
         return (
             <div className={`main-right`}>
@@ -56,6 +57,9 @@ class MainRight extends Component {
                         }
                     })}
                 </PoseGroup>
+                <div className="hide-for-large">
+                    <ImgArrows nextImage={nextImage} prevImage={prevImage} imageCount={imageCount} />
+                </div>
             </div>
         )
     }

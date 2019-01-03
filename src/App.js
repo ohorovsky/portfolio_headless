@@ -3,12 +3,11 @@ import { content, pageNames } from './pagesContent';
 import TopBar from './components/TopBar';
 import SideNav from './components/SideNav';
 import MainBody from './components/MainBody/MainBody';
-import Footer from './components/Footer';
 import './App.css';
+import SmallFooter from './components/MainBody/SmallFooter';
 
 
 
-console.log(pageNames)
 
 class App extends Component {
 
@@ -23,7 +22,6 @@ class App extends Component {
   componentDidMount = () => {
 
     const page = this.props.location.pathname.substr(1)
-    console.log(page)
     this.updatePageContent(page)
   }
 
@@ -72,7 +70,11 @@ class App extends Component {
       <div className="app__wrapper">
         <div className="body-background-left"></div>
         <div className="body-background-right"></div>
-        <TopBar />
+        <TopBar
+          mainPageNames={mainPageNames}
+          updatePageContent={this.updatePageContent}
+          activeMainPage={activeMainPage}
+        />
         <MainBody
           pageContent={pageContent}
           activePage={activePage}
@@ -87,7 +89,9 @@ class App extends Component {
         {pageContent.length > 1 && (
           <SideNav pageContent={pageContent} updateActivePage={this.updateActivePage} activePage={activePage} />
         )}
-        <Footer />
+        <div className="hide-for-large small-12 medium-11 medium-centered columns">
+          <SmallFooter />
+        </div>
       </div>
     );
   }

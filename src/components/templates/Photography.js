@@ -78,7 +78,7 @@ export default class Photography extends Component {
 
         return (
             <div className={`page photography`}>
-                <div className="small-12 medium-10 medium-centered">
+                <div className="small-12 large-10 large-centered">
                     <div className="heading__wrapper">
                         <h1 className="page__heading">{heading}</h1>
                     </div>
