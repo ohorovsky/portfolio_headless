@@ -76,6 +76,14 @@ export default class Svg extends Component {
                         <path fill="#000" d="M274.5 523.5l147-147-147-147 45-45 192 192-192 192z"></path>
                     </svg>
                 )
+            case 'arrow':
+                return (
+                    <svg width="40px" height="40px" viewBox="0 0 13 8" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                        <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                            <polyline id="Path-2" stroke="#000" transform="translate(7.029053, 3.930908) rotate(-90.000000) translate(-7.029053, -3.930908) " points="10.0581055 -2 4 3.82397461 9.80053711 9.86181641"></polyline>
+                        </g>
+                    </svg>
+                )
             default:
                 return (
                     <p>Pick SVG!</p>

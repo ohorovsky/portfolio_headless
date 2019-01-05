@@ -10,7 +10,7 @@ export const content = {
     {
       template: 'intro',
       heading: "Hi there, I'm Ondrej. Front-End Developer",
-      subheading: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum aliquet mi quis.",
+      subheading: "Get ready to turn your ideas into reality. Please take a look around!",
       paragraphs: {
         0: "",
         1: "",
@@ -23,8 +23,8 @@ export const content = {
       template: 'mainSimple',
       heading: "About me",
       paragraphs: {
-        0: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum aliquet mi quis velit sollicitudin, quis pretium justo egestas. Nullam sagittis tincidunt sapien et fringilla. Cras ullamcorper hendrerit mauris at dictum. Vivamus nec sapien ac tellus dignissim malesuada eu eu leo. Aenean sollicitudin faucibus eros, ut vehicula massa pretium ultricies. Donec vel enim purus. Integer lacinia ante eu consectetur feugiat.",
-        1: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum aliquet mi quis velit sollicitudin, quis pretium justo egestas. Nullam sagittis tincidunt sapien et fringilla. Cras ullamcorper hendrerit mauris at dictum. Vivamus nec sapien ac tellus dignissim malesuada eu eu leo. Aenean sollicitudin.",
+        0: "My name is Ondrej Horovsky and i'm Web Developer based in London. I have always believed that in most cases LESS is actually MORE so from the very beginning of my career as developer I was focusing on simplifying stuff.",
+        1: "Currently I am open for freelance work as well as for full-time position so please do not hesitate to contact me and together we can realise your ideas!",
       },
       images: [
         "/img/home/1.jpeg",

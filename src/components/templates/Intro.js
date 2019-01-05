@@ -3,7 +3,8 @@ import React, { Component } from 'react';
 class Intro extends Component {
 
     render() {
-        const { heading, subheading } = this.props.pageContent;
+        const { pageContent, nextPage } = this.props;
+        const { heading, subheading } = pageContent;
         return (
             <div className={`page intro`}>
                 <div className="small-12 large-10 large-centered">
@@ -15,6 +16,13 @@ class Intro extends Component {
                             <h2 className="page__subheading">{subheading}</h2>
                         </div>
                     </div>
+                    <button type="button" onClick={nextPage} className="intro-next-button" aria-label="next page">
+                        <div className="pulse pulse-1" />
+                        <div className="pulse pulse-2" />
+                        <div className="dot__wrapper">
+                            <div className="dot"></div>
+                        </div>
+                    </button>
                 </div>
             </div>
         )
