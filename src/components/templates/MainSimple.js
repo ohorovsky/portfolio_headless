@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
+import NextPageBtn from '../MainBody/NextPageBtn'
+import { Svg } from '../../utilities'
 
 class MainSimple extends Component {
 
     render() {
-        const { heading, paragraphs } = this.props.pageContent;
+        const { pageContent, nextPage, isLastPage } = this.props;
+        const { heading, paragraphs } = pageContent;
         return (
             <div className={`page mainSimple`}>
                 <div className="small-12 large-10 large-centered">
@@ -17,6 +20,9 @@ class MainSimple extends Component {
                             </div>
                         )
                     })}
+                    {!isLastPage && (
+                        <NextPageBtn nextPage={nextPage} />
+                    )}
                 </div>
             </div>
         )

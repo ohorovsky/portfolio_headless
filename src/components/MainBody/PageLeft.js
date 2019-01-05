@@ -5,11 +5,11 @@ import TemplateSwitch from '../TemplateSwitch';
 class PageLeft extends Component {
 
     render() {
-        const { pageContent, updateActivePage, animationFinished } = this.props
+        const { pageContent, updateActivePage, animationFinished, nextPage, isLastPage } = this.props
         if (animationFinished) {
             return (
 
-                <TemplateSwitch pageContent={pageContent} updateActivePage={updateActivePage} animationFinished={animationFinished} />
+                <TemplateSwitch pageContent={pageContent} updateActivePage={updateActivePage} animationFinished={animationFinished} nextPage={nextPage} isLastPage={isLastPage} />
 
             )
         }

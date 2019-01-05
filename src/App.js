@@ -20,7 +20,6 @@ class App extends Component {
   }
 
   componentDidMount = () => {
-
     const page = this.props.location.pathname.substr(1)
     this.updatePageContent(page)
   }
@@ -47,12 +46,23 @@ class App extends Component {
   updateActivePage = page => {
     let { pageContent, activePage, mainLeftWidth } = this.state
     mainLeftWidth = pageContent[page].mainLeftWidth;
-
     activePage = page;
     this.setState({
       activePage,
       mainLeftWidth,
     })
+  }
+
+  nextPage = () => {
+    let { pageContent, activePage, mainLeftWidth } = this.state
+    if (activePage < pageContent.length - 1) {
+      activePage++;
+      mainLeftWidth = pageContent[activePage].mainLeftWidth;
+      this.setState({
+        activePage,
+        mainLeftWidth,
+      })
+    }
   }
 
   updateMainLeftWidth = () => {
@@ -85,6 +95,7 @@ class App extends Component {
           updatePageContent={this.updatePageContent}
           mainLeftWidth={mainLeftWidth}
           mainPageNames={mainPageNames}
+          nextPage={this.nextPage}
         />
         {pageContent.length > 1 && (
           <SideNav pageContent={pageContent} updateActivePage={this.updateActivePage} activePage={activePage} />

@@ -50,10 +50,10 @@ class MainBody extends Component {
 
     render() {
         const { imageCount, carouselDirection } = this.state;
-        const { updateMainLeftWidth, mainLeftWidth, pageContent, activePage, activeMainPage, updateActivePage, updatePageContent, mainPageNames } = this.props;
+        const { updateMainLeftWidth, mainLeftWidth, pageContent, activePage, activeMainPage, updateActivePage, updatePageContent, mainPageNames, nextPage } = this.props;
 
         return (
-            <div className='main-body columns small-12 medium-11 medium-centered'>
+            <div className='main-body row columns small-12 medium-11 medium-centered'>
                 <ExpandBtn imageCount={imageCount} mainLeftWidth={mainLeftWidth} updateMainLeftWidth={updateMainLeftWidth} />
                 <div className="show-for-large">
                     <ImgArrows nextImage={this.nextImage} prevImage={this.prevImage} imageCount={imageCount} />
@@ -66,6 +66,7 @@ class MainBody extends Component {
                     updatePageContent={updatePageContent}
                     mainLeftWidth={mainLeftWidth}
                     mainPageNames={mainPageNames}
+                    nextPage={nextPage}
                 />
                 <MainRight
                     images={pageContent[activePage].images}

@@ -48,7 +48,7 @@ class MainLeft extends Component {
 
   render() {
     const { animationFinished } = this.state;
-    const { pageContent, activePage, updatePageContent, updateActivePage, activeMainPage, mainPageNames, mainLeftWidth } = this.props
+    const { pageContent, activePage, updatePageContent, updateActivePage, activeMainPage, mainPageNames, mainLeftWidth, nextPage } = this.props
     let boxPoseConfig;
     mainLeftWidth === 0 ? boxPoseConfig = "closed" : null
     mainLeftWidth === 1 ? boxPoseConfig = "half" : null
@@ -67,16 +67,19 @@ class MainLeft extends Component {
             <PoseGroup animateOnMount>
               {pageContent.map((key, index) => {
                 if (activePage == index) {
+                  let isLastPage = pageContent.length - 1 === index;
                   return (
                     <Page
                       key={index}
                       className="page__wrapper"
                     >
                       <PageLeft
-                        index={index}
+                        // index={index}
                         pageContent={pageContent[index]}
                         updateActivePage={updateActivePage}
                         animationFinished={animationFinished}
+                        nextPage={nextPage}
+                        isLastPage={isLastPage}
                       />
                     </Page>
                   )

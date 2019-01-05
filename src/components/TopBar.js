@@ -24,7 +24,7 @@ class TopBar extends Component {
         const { mainPageNames, activeMainPage, updatePageContent } = this.props;
         return (
             <Fragment>
-                <div className="columns small-12 medium-11 medium-centered topbar">
+                <div className="row columns small-12 medium-11 medium-centered topbar">
                     <img className="logo" src="/img/logo.png" alt="On-Dro logo" />
                 </div>
                 <div className="hide-for-large mobile-menu__wrapper">

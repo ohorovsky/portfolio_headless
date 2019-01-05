@@ -49,6 +49,7 @@
     }
 }
 button{
+    cursor: pointer;
     &:focus{
         outline-color: $primary-color;
     }
