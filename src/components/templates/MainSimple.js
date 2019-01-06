@@ -13,10 +13,10 @@ class MainSimple extends Component {
                     <div className="heading__wrapper">
                         <h1 className="page__heading">{heading}</h1>
                     </div>
-                    {Object.keys(paragraphs).map(key => {
+                    {paragraphs.map((paragraph, i) => {
                         return (
-                            <div key={key} className="small-12 large-10 large-centered paragraph__wrapper">
-                                <p className="page__paragraph">{paragraphs[key]}</p>
+                            <div key={i} className="small-12 large-10 large-centered paragraph__wrapper">
+                                <p className="page__paragraph">{paragraph}</p>
                             </div>
                         )
                     })}

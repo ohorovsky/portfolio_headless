@@ -5,6 +5,7 @@ import PropTypes from 'prop-types'
 import StackGrid, { transitions } from 'react-stack-grid';
 import pose from 'react-pose';
 import 'lightgallery.js';
+import { capitalize, splitCamelCase } from '../../utilities'
 
 const Button = pose.button({
     active: { fontSize: '19px', color: '#4A4A4A', fontWeight: 800 },
@@ -88,7 +89,7 @@ export default class Photography extends Component {
                         </Button>
                         {filter.map((filterType, index) => (
                             <Button pose={activeFilter == filterType ? 'active' : 'inactive'} key={(index)} type="button" className="filter-item" onClick={() => this.filterChange(filterType)}>
-                                <span>{filterType}</span>
+                                <span>{splitCamelCase(capitalize(filterType))}</span>
                             </Button>
                         ))}
                     </div>
