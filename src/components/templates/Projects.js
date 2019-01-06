@@ -25,11 +25,9 @@ class Projects extends Component {
 
                                 <div key={project} className="project-thumbnail" onClick={() => changeActivePage(project.pageRef, this.props)}>
                                     <img class="image" src={project.image} alt={project.name} />
-                                    <p className="page__paragraph" >{project.name}</p>
+                                    <div className="thumbnail-overlay"></div>
+                                    <h2 className="thumbnail-heading" >{project.name}</h2>
                                 </div>
-
-
-
                             )
                         })}
                     </div>
