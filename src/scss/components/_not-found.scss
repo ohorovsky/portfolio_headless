@@ -1,0 +1,13 @@
+.notfound{
+    width: 100%;
+    background: $white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .notfound__wrapper{
+        text-align: center;
+        .rect-button{
+            margin-top: $global-margin * 2;
+        }
+    }
+}

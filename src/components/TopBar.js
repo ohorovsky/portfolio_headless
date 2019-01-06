@@ -2,6 +2,7 @@ import React, { Component, Fragment } from 'react';
 import styled from 'styled-components';
 import Hamburger from './Hamburger/Hamburger'
 import MobileMenu from './MobileMenu'
+import Logo from './Logo'
 // import PropTypes from 'prop-types';
 
 class TopBar extends Component {
@@ -24,9 +25,7 @@ class TopBar extends Component {
         const { mainPageNames, activeMainPage, updatePageContent } = this.props;
         return (
             <Fragment>
-                <div className="row columns small-12 medium-11 medium-centered topbar">
-                    <img className="logo" src="/img/logo.png" alt="On-Dro logo" />
-                </div>
+                <Logo />
                 <div className="hide-for-large mobile-menu__wrapper">
                     <div className="columns small-12 medium-11 medium-centered hamburger__wrapper">
                         <Hamburger name="type1" activateMenu={this.activateMenu} menuActive={menuActive} />
