@@ -33,6 +33,8 @@
     "jest": "20.0.4",
     "lightgallery.js": "^1.1.1",
     "object-assign": "4.1.1",
+    "pa11y": "^5.1.0",
+    "pa11y-reporter-html": "^1.0.0",
     "popmotion": "^8.2.3",
     "popmotion-react": "^2.1.1",
     "postcss-flexbugs-fixes": "3.2.0",

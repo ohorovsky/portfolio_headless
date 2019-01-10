@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<meta charset="utf-8"/>
+	<title>Accessibility Report For "http://redesign.on-dro.com/" (Thu Jan 10 2019 00:32:46 GMT+0000 (GMT))</title>
+
+	<style>
+
+		html, body {
+			margin: 0;
+			padding: 0;
+			background-color: #fff;
+			font-family: Arial, Helvetica, sans-serif;
+			font-size: 16px;
+			line-height: 22px;
+			color: #333;
+		}
+		li {
+			margin-bottom: 15px;
+		}
+		h1, h2, p, pre, ul {
+			margin-top: 0;
+			margin-bottom: 0;
+		}
+		h1 {
+			margin-bottom: 10px;
+			font-size: 24px;
+			line-height: 24px;
+		}
+		h2 {
+			font-size: 16px;
+		}
+		pre {
+			white-space: pre-wrap;
+			overflow: auto;
+		}
+
+		.page {
+			max-width: 800px;
+			margin: 0 auto;
+			padding: 25px;
+		}
+
+		.counts {
+			margin-top: 30px;
+			font-size: 20px;
+		}
+		.count {
+			display: inline-block;
+			padding: 5px;
+			border-radius: 5px;
+			border: 1px solid #eee;
+		}
+
+		.clean-list {
+			margin-left: 0;
+			padding-left: 0;
+			list-style: none;
+		}
+		.results-list {
+			margin-top: 30px;
+		}
+
+		.result {
+			padding: 10px;
+			border-radius: 5px;
+			border: 1px solid #eee;
+		}
+		.error {
+			background-color: #fdd;
+			border-color: #ff9696;
+		}
+		.warning {
+			background-color: #ffd;
+			border-color: #e7c12b;
+		}
+		.notice {
+			background-color: #eef4ff;
+			border-color: #b6d0ff;
+		}
+
+	</style>
+
+</head>
+<body>
+
+	<div class="page">
+
+		<h1>Accessibility Report For "http://redesign.on-dro.com/"</h1>
+		<p>Generated at: Thu Jan 10 2019 00:32:46 GMT+0000 (GMT)</p>
+
+		<p class="counts">
+			<span class="count error">27 errors</span>
+			<span class="count warning">12 warnings</span>
+			<span class="count notice">26 notices</span>
+		</p>
+
+		<ul class="clean-list results-list">
+			<li class="result notice">
+				<h2>Notice: Check that the title element describes the document.</h2>
+				<p>WCAG2AAA.Principle2.Guideline2_4.2_4_2.H25.2</p>
+				<pre>&lt;title&gt;React App&lt;/title&gt; (select with "html &gt; head &gt; title")</pre>
+			</li>
+			<li class="result notice">
+				<h2>Notice: Ensure that the img element&#39;s alt text serves the same purpose and presents the same information as the image.</h2>
+				<p>WCAG2AAA.Principle1.Guideline1_1.1_1_1.G94.Image</p>
+				<pre>&lt;img class=&quot;logo&quot; src=&quot;/img/logo.png&quot; alt=&quot;On-Dro logo&quot;&gt; (select with "#root &gt; div &gt; div:nth-child(3) &gt; img")</pre>
+			</li>
+			<li class="result notice">
+				<h2>Notice: If this image cannot be fully described in a short text alternative, ensure a long text alternative is also available, such as in the body text or through a link.</h2>
+				<p>WCAG2AAA.Principle1.Guideline1_1.1_1_1.G73,G74</p>
+				<pre>&lt;img class=&quot;logo&quot; src=&quot;/img/logo.png&quot; alt=&quot;On-Dro logo&quot;&gt; (select with "#root &gt; div &gt; div:nth-child(3) &gt; img")</pre>
+			</li>
+			<li class="result error">
+				<h2>Error: This button element does not have a name available to an accessibility API. Valid names are: title undefined, element content, aria-label undefined, aria-labelledby undefined.</h2>
+				<p>WCAG2AAA.Principle4.Guideline4_1.4_1_2.H91.Button.Name</p>
+				<pre>&lt;button type=&quot;button&quot; class=&quot;hamburger type-1&quot;&gt;&lt;div class=&quot;bar&quot;&gt;&lt;/div&gt;&lt;div cla...&lt;/button&gt; (select with "#root &gt; div &gt; div:nth-child(4) &gt; div:nth-child(1) &gt; button")</pre>
+			</li>
+			<li class="result notice">
+				<h2>Notice: Check that a change of context does not occur when this input field receives focus.</h2>
+				<p>WCAG2AAA.Principle3.Guideline3_2.3_2_1.G107</p>
+				<pre>&lt;button type=&quot;button&quot; class=&quot;hamburger type-1&quot;&gt;&lt;div class=&quot;bar&quot;&gt;&lt;/div&gt;&lt;div cla...&lt;/button&gt; (select with "#root &gt; div &gt; div:nth-child(4) &gt; div:nth-child(1) &gt; button")</pre>
+			</li>
+			<li class="result warning">
+				<h2>Warning: If this element contains a navigation section, it is recommended that it be marked up as a list.</h2>
+				<p>WCAG2AAA.Principle1.Guideline1_3.1_3_1.H48</p>
+				<pre>&lt;div class=&quot;links__wrapper&quot;&gt;&lt;a href=&quot;/home&quot;&gt;&lt;div class=&quot;mob...&lt;/div&gt; (select with "#root &gt; div &gt; div:nth-child(4) &gt; div:nth-child(2) &gt; div")</pre>
+			</li>
+			<li class="result notice">
+				<h2>Notice: Check that text of the link describes the purpose of the link.</h2>
+				<p>WCAG2AAA.Principle2.Guideline2_4.2_4_9.H30</p>
+				<pre>&lt;a href=&quot;/home&quot;&gt;&lt;div class=&quot;mobile-menu-link ac...&lt;/a&gt; (select with "#root &gt; div &gt; div:nth-child(4) &gt; div:nth-child(2) &gt; div &gt; a:nth-child(1)")</pre>
+			</li>
+			<li class="result notice">
+				<h2>Notice: Check that text of the link describes the purpose of the link.</h2>
+				<p>WCAG2AAA.Principle2.Guideline2_4.2_4_9.H30</p>
+				<pre>&lt;a href=&quot;/projects&quot;&gt;&lt;div class=&quot;mobile-menu-link &quot; ...&lt;/a&gt; (select with "#root &gt; div &gt; div:nth-child(4) &gt; div:nth-child(2) &gt; div &gt; a:nth-child(2)")</pre>
+			</li>
+			<li class="result notice">
+				<h2>Notice: Check that text of the link describes the purpose of the link.</h2>
+				<p>WCAG2AAA.Principle2.Guideline2_4.2_4_9.H30</p>
+				<pre>&lt;a href=&quot;/photography&quot;&gt;&lt;div class=&quot;mobile-menu-link &quot; ...&lt;/a&gt; (select with "#root &gt; div &gt; div:nth-child(4) &gt; div:nth-child(2) &gt; div &gt; a:nth-child(3)")</pre>
+			</li>
+			<li class="result notice">
+				<h2>Notice: Check that text of the link describes the purpose of the link.</h2>
+				<p>WCAG2AAA.Principle2.Guideline2_4.2_4_9.H30</p>
+				<pre>&lt;a href=&quot;/contact&quot;&gt;&lt;div class=&quot;mobile-menu-link &quot; ...&lt;/a&gt; (select with "#root &gt; div &gt; div:nth-child(4) &gt; div:nth-child(2) &gt; div &gt; a:nth-child(4)")</pre>
+			</li>
+			<li class="result error">
+				<h2>Error: This button element does not have a name available to an accessibility API. Valid names are: title undefined, element content, aria-label undefined, aria-labelledby undefined.</h2>
+				<p>WCAG2AAA.Principle4.Guideline4_1.4_1_2.H91.Button.Name</p>
+				<pre>&lt;button class=&quot;img-button&quot;&gt;&lt;svg version=&quot;1.1&quot; xmlns=&quot;http:...&lt;/button&gt; (select with "#root &gt; div &gt; div:nth-child(5) &gt; div:nth-child(2) &gt; div &gt; button:nth-child(1)")</pre>
+			</li>
+			<li class="result notice">
+				<h2>Notice: Check that a change of context does not occur when this input field receives focus.</h2>
+				<p>WCAG2AAA.Principle3.Guideline3_2.3_2_1.G107</p>
+				<pre>&lt;button class=&quot;img-button&quot;&gt;&lt;svg version=&quot;1.1&quot; xmlns=&quot;http:...&lt;/button&gt; (select with "#root &gt; div &gt; div:nth-child(5) &gt; div:nth-child(2) &gt; div &gt; button:nth-child(1)")</pre>
+			</li>
+			<li class="result error">
+				<h2>Error: Duplicate id attribute value &quot;icomoon-ignore&quot; found on the web page.</h2>
+				<p>WCAG2AAA.Principle4.Guideline4_1.4_1_1.F77</p>
+				<pre>&lt;g id=&quot;icomoon-ignore&quot;&gt;&lt;/g&gt; (select with "#icomoon-ignore")</pre>
+			</li>
+			<li class="result error">
+				<h2>Error: This button element does not have a name available to an accessibility API. Valid names are: title undefined, element content, aria-label undefined, aria-labelledby undefined.</h2>
+				<p>WCAG2AAA.Principle4.Guideline4_1.4_1_2.H91.Button.Name</p>
+				<pre>&lt;button class=&quot;img-button&quot;&gt;&lt;svg version=&quot;1.1&quot; xmlns=&quot;http:...&lt;/button&gt; (select with "#root &gt; div &gt; div:nth-child(5) &gt; div:nth-child(2) &gt; div &gt; button:nth-child(2)")</pre>
+			</li>
+			<li class="result notice">
+				<h2>Notice: Check that a change of context does not occur when this input field receives focus.</h2>
+				<p>WCAG2AAA.Principle3.Guideline3_2.3_2_1.G107</p>
+				<pre>&lt;button class=&quot;img-button&quot;&gt;&lt;svg version=&quot;1.1&quot; xmlns=&quot;http:...&lt;/button&gt; (select with "#root &gt; div &gt; div:nth-child(5) &gt; div:nth-child(2) &gt; div &gt; button:nth-child(2)")</pre>
+			</li>
+			<li class="result error">
+				<h2>Error: Duplicate id attribute value &quot;icomoon-ignore&quot; found on the web page.</h2>
+				<p>WCAG2AAA.Principle4.Guideline4_1.4_1_1.F77</p>
+				<pre>&lt;g id=&quot;icomoon-ignore&quot;&gt;&lt;/g&gt; (select with "#icomoon-ignore")</pre>
+			</li>
+			<li class="result warning">
+				<h2>Warning: If this element contains a navigation section, it is recommended that it be marked up as a list.</h2>
+				<p>WCAG2AAA.Principle1.Guideline1_3.1_3_1.H48</p>
+				<pre>&lt;div class=&quot;links__wrapper&quot;&gt;&lt;a href=&quot;/home&quot;&gt;&lt;div class=&quot;sma...&lt;/div&gt; (select with "#root &gt; div &gt; div:nth-child(5) &gt; div:nth-child(3) &gt; div &gt; div:nth-child(1) &gt; div:nth-child(1)")</pre>
+			</li>
+			<li class="result notice">
+				<h2>Notice: Check that text of the link describes the purpose of the link.</h2>
+				<p>WCAG2AAA.Principle2.Guideline2_4.2_4_9.H30</p>
+				<pre>&lt;a href=&quot;/home&quot;&gt;&lt;div class=&quot;small-nav__link&quot; st...&lt;/a&gt; (select with "#root &gt; div &gt; div:nth-child(5) &gt; div:nth-child(3) &gt; div &gt; div:nth-child(1) &gt; div:nth-child(1) &gt; a:nth-child(1)")</pre>
+			</li>
+			<li class="result warning">
+				<h2>Warning: Check that this element has an inherited background colour or image to complement the corresponding inline foreground colour.</h2>
+				<p>WCAG2AAA.Principle1.Guideline1_4.1_4_3_F24.F24.FGColour</p>
+				<pre>&lt;div class=&quot;small-nav__link&quot; style=&quot;font-size: 19px; color: rgb(74, 74, 74); font-weight: 800;&quot;&gt;Home&lt;/div&gt; (select with "#root &gt; div &gt; div:nth-child(5) &gt; div:nth-child(3) &gt; div &gt; div:nth-child(1) &gt; div:nth-child(1) &gt; a:nth-child(1) &gt; div")</pre>
+			</li>
+			<li class="result notice">
+				<h2>Notice: Check that text of the link describes the purpose of the link.</h2>
+				<p>WCAG2AAA.Principle2.Guideline2_4.2_4_9.H30</p>
+				<pre>&lt;a href=&quot;/projects&quot;&gt;&lt;div class=&quot;small-nav__link&quot; st...&lt;/a&gt; (select with "#root &gt; div &gt; div:nth-child(5) &gt; div:nth-child(3) &gt; div &gt; div:nth-child(1) &gt; div:nth-child(1) &gt; a:nth-child(2)")</pre>
+			</li>
+			<li class="result warning">
+				<h2>Warning: Check that this element has an inherited background colour or image to complement the corresponding inline foreground colour.</h2>
+				<p>WCAG2AAA.Principle1.Guideline1_4.1_4_3_F24.F24.FGColour</p>
+				<pre>&lt;div class=&quot;small-nav__link&quot; style=&quot;font-size: 15px; color: rgb(116, 116, 116); font-weight: 300;&quot;&gt;Projects&lt;/div&gt; (select with "#root &gt; div &gt; div:nth-child(5) &gt; div:nth-child(3) &gt; div &gt; div:nth-child(1) &gt; div:nth-child(1) &gt; a:nth-child(2) &gt; div")</pre>
+			</li>
+			<li class="result error">
+				<h2>Error: This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 7:1, but text in this element has a contrast ratio of 4.67:1. Recommendation: change text colour to #595959.</h2>
+				<p>WCAG2AAA.Principle1.Guideline1_4.1_4_6.G17.Fail</p>
+				<pre>&lt;div class=&quot;small-nav__link&quot; style=&quot;font-size: 15px; color: rgb(116, 116, 116); font-weight: 300;&quot;&gt;Projects&lt;/div&gt; (select with "#root &gt; div &gt; div:nth-child(5) &gt; div:nth-child(3) &gt; div &gt; div:nth-child(1) &gt; div:nth-child(1) &gt; a:nth-child(2) &gt; div")</pre>
+			</li>
+			<li class="result notice">
+				<h2>Notice: Check that text of the link describes the purpose of the link.</h2>
+				<p>WCAG2AAA.Principle2.Guideline2_4.2_4_9.H30</p>
+				<pre>&lt;a href=&quot;/photography&quot;&gt;&lt;div class=&quot;small-nav__link&quot; st...&lt;/a&gt; (select with "#root &gt; div &gt; div:nth-child(5) &gt; div:nth-child(3) &gt; div &gt; div:nth-child(1) &gt; div:nth-child(1) &gt; a:nth-child(3)")</pre>
+			</li>
+			<li class="result warning">
+				<h2>Warning: Check that this element has an inherited background colour or image to complement the corresponding inline foreground colour.</h2>
+				<p>WCAG2AAA.Principle1.Guideline1_4.1_4_3_F24.F24.FGColour</p>
+				<pre>&lt;div class=&quot;small-nav__link&quot; style=&quot;font-size: 15px; color: rgb(116, 116, 116); font-weight: 300;&quot;&gt;Photography&lt;/div&gt; (select with "#root &gt; div &gt; div:nth-child(5) &gt; div:nth-child(3) &gt; div &gt; div:nth-child(1) &gt; div:nth-child(1) &gt; a:nth-child(3) &gt; div")</pre>
+			</li>
+			<li class="result error">
+				<h2>Error: This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 7:1, but text in this element has a contrast ratio of 4.67:1. Recommendation: change text colour to #595959.</h2>
+				<p>WCAG2AAA.Principle1.Guideline1_4.1_4_6.G17.Fail</p>
+				<pre>&lt;div class=&quot;small-nav__link&quot; style=&quot;font-size: 15px; color: rgb(116, 116, 116); font-weight: 300;&quot;&gt;Photography&lt;/div&gt; (select with "#root &gt; div &gt; div:nth-child(5) &gt; div:nth-child(3) &gt; div &gt; div:nth-child(1) &gt; div:nth-child(1) &gt; a:nth-child(3) &gt; div")</pre>
+			</li>
+			<li class="result notice">
+				<h2>Notice: Check that text of the link describes the purpose of the link.</h2>
+				<p>WCAG2AAA.Principle2.Guideline2_4.2_4_9.H30</p>
+				<pre>&lt;a href=&quot;/contact&quot;&gt;&lt;div class=&quot;small-nav__link&quot; st...&lt;/a&gt; (select with "#root &gt; div &gt; div:nth-child(5) &gt; div:nth-child(3) &gt; div &gt; div:nth-child(1) &gt; div:nth-child(1) &gt; a:nth-child(4)")</pre>
+			</li>
+			<li class="result warning">
+				<h2>Warning: Check that this element has an inherited background colour or image to complement the corresponding inline foreground colour.</h2>
+				<p>WCAG2AAA.Principle1.Guideline1_4.1_4_3_F24.F24.FGColour</p>
+				<pre>&lt;div class=&quot;small-nav__link&quot; style=&quot;font-size: 15px; color: rgb(116, 116, 116); font-weight: 300;&quot;&gt;Contact&lt;/div&gt; (select with "#root &gt; div &gt; div:nth-child(5) &gt; div:nth-child(3) &gt; div &gt; div:nth-child(1) &gt; div:nth-child(1) &gt; a:nth-child(4) &gt; div")</pre>
+			</li>
+			<li class="result error">
+				<h2>Error: This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 7:1, but text in this element has a contrast ratio of 4.67:1. Recommendation: change text colour to #595959.</h2>
+				<p>WCAG2AAA.Principle1.Guideline1_4.1_4_6.G17.Fail</p>
+				<pre>&lt;div class=&quot;small-nav__link&quot; style=&quot;font-size: 15px; color: rgb(116, 116, 116); font-weight: 300;&quot;&gt;Contact&lt;/div&gt; (select with "#root &gt; div &gt; div:nth-child(5) &gt; div:nth-child(3) &gt; div &gt; div:nth-child(1) &gt; div:nth-child(1) &gt; a:nth-child(4) &gt; div")</pre>
+			</li>
+			<li class="result warning">
+				<h2>Warning: This element is absolutely positioned and the background color can not be determined. Ensure the contrast ratio between the text and all covered parts of the background are at least 4.5:1.</h2>
+				<p>WCAG2AAA.Principle1.Guideline1_4.1_4_6.G18.Abs</p>
+				<pre>&lt;h1 class=&quot;page__heading&quot;&gt;Hi there, I&#39;m Ondrej. Front-End...&lt;/h1&gt; (select with "#root &gt; div &gt; div:nth-child(5) &gt; div:nth-child(3) &gt; div &gt; div:nth-child(2) &gt; div &gt; div &gt; div &gt; div &gt; div:nth-child(1) &gt; h1")</pre>
+			</li>
+			<li class="result warning">
+				<h2>Warning: This element is absolutely positioned and the background color can not be determined. Ensure the contrast ratio between the text and all covered parts of the background are at least 4.5:1.</h2>
+				<p>WCAG2AAA.Principle1.Guideline1_4.1_4_6.G18.Abs</p>
+				<pre>&lt;h2 class=&quot;page__subheading&quot;&gt;Get ready to turn your ideas in...&lt;/h2&gt; (select with "#root &gt; div &gt; div:nth-child(5) &gt; div:nth-child(3) &gt; div &gt; div:nth-child(2) &gt; div &gt; div &gt; div &gt; div &gt; div:nth-child(2) &gt; h2")</pre>
+			</li>
+			<li class="result notice">
+				<h2>Notice: Check that a change of context does not occur when this input field receives focus.</h2>
+				<p>WCAG2AAA.Principle3.Guideline3_2.3_2_1.G107</p>
+				<pre>&lt;button type=&quot;button&quot; class=&quot;intro-next-button&quot; aria-label=&quot;next page&quot;&gt;&lt;div class=&quot;pulse pulse-1&quot;&gt;&lt;/di...&lt;/button&gt; (select with "#root &gt; div &gt; div:nth-child(5) &gt; div:nth-child(3) &gt; div &gt; div:nth-child(2) &gt; div &gt; div &gt; div &gt; button")</pre>
+			</li>
+			<li class="result warning">
+				<h2>Warning: If this element contains a navigation section, it is recommended that it be marked up as a list.</h2>
+				<p>WCAG2AAA.Principle1.Guideline1_3.1_3_1.H48</p>
+				<pre>&lt;div class=&quot;small-footer small-nav&quot;&gt;&lt;a href=&quot;http://www.facebook.co...&lt;/div&gt; (select with "#root &gt; div &gt; div:nth-child(5) &gt; div:nth-child(3) &gt; div &gt; div:nth-child(3) &gt; div")</pre>
+			</li>
+			<li class="result error">
+				<h2>Error: Anchor element found with a valid href attribute, but no link content has been supplied.</h2>
+				<p>WCAG2AAA.Principle4.Guideline4_1.4_1_2.H91.A.NoContent</p>
+				<pre>&lt;a href=&quot;http://www.facebook.com&quot; target=&quot;_blank&quot; class=&quot;small-nav__link&quot;&gt;&lt;svg version=&quot;1.1&quot; xmlns=&quot;http:...&lt;/a&gt; (select with "#root &gt; div &gt; div:nth-child(5) &gt; div:nth-child(3) &gt; div &gt; div:nth-child(3) &gt; div &gt; a:nth-child(1)")</pre>
+			</li>
+			<li class="result notice">
+				<h2>Notice: Check that text of the link describes the purpose of the link.</h2>
+				<p>WCAG2AAA.Principle2.Guideline2_4.2_4_9.H30</p>
+				<pre>&lt;a href=&quot;http://www.facebook.com&quot; target=&quot;_blank&quot; class=&quot;small-nav__link&quot;&gt;&lt;svg version=&quot;1.1&quot; xmlns=&quot;http:...&lt;/a&gt; (select with "#root &gt; div &gt; div:nth-child(5) &gt; div:nth-child(3) &gt; div &gt; div:nth-child(3) &gt; div &gt; a:nth-child(1)")</pre>
+			</li>
+			<li class="result warning">
+				<h2>Warning: Check that this link&#39;s link text contains information indicating that the link will open in a new window.</h2>
+				<p>WCAG2AAA.Principle3.Guideline3_2.3_2_5.H83.3</p>
+				<pre>&lt;a href=&quot;http://www.facebook.com&quot; target=&quot;_blank&quot; class=&quot;small-nav__link&quot;&gt;&lt;svg version=&quot;1.1&quot; xmlns=&quot;http:...&lt;/a&gt; (select with "#root &gt; div &gt; div:nth-child(5) &gt; div:nth-child(3) &gt; div &gt; div:nth-child(3) &gt; div &gt; a:nth-child(1)")</pre>
+			</li>
+			<li class="result error">
+				<h2>Error: Duplicate id attribute value &quot;icomoon-ignore&quot; found on the web page.</h2>
+				<p>WCAG2AAA.Principle4.Guideline4_1.4_1_1.F77</p>
+				<pre>&lt;g id=&quot;icomoon-ignore&quot;&gt;&lt;/g&gt; (select with "#icomoon-ignore")</pre>
+			</li>
+			<li class="result error">
+				<h2>Error: Anchor element found with a valid href attribute, but no link content has been supplied.</h2>
+				<p>WCAG2AAA.Principle4.Guideline4_1.4_1_2.H91.A.NoContent</p>
+				<pre>&lt;a href=&quot;www.github.com&quot; class=&quot;small-nav__link&quot;&gt;&lt;svg version=&quot;1.1&quot; xmlns=&quot;http:...&lt;/a&gt; (select with "#root &gt; div &gt; div:nth-child(5) &gt; div:nth-child(3) &gt; div &gt; div:nth-child(3) &gt; div &gt; a:nth-child(2)")</pre>
+			</li>
+			<li class="result notice">
+				<h2>Notice: Check that text of the link describes the purpose of the link.</h2>
+				<p>WCAG2AAA.Principle2.Guideline2_4.2_4_9.H30</p>
+				<pre>&lt;a href=&quot;www.github.com&quot; class=&quot;small-nav__link&quot;&gt;&lt;svg version=&quot;1.1&quot; xmlns=&quot;http:...&lt;/a&gt; (select with "#root &gt; div &gt; div:nth-child(5) &gt; div:nth-child(3) &gt; div &gt; div:nth-child(3) &gt; div &gt; a:nth-child(2)")</pre>
+			</li>
+			<li class="result error">
+				<h2>Error: Duplicate id attribute value &quot;icomoon-ignore&quot; found on the web page.</h2>
+				<p>WCAG2AAA.Principle4.Guideline4_1.4_1_1.F77</p>
+				<pre>&lt;g id=&quot;icomoon-ignore&quot;&gt;&lt;/g&gt; (select with "#icomoon-ignore")</pre>
+			</li>
+			<li class="result error">
+				<h2>Error: Anchor element found with a valid href attribute, but no link content has been supplied.</h2>
+				<p>WCAG2AAA.Principle4.Guideline4_1.4_1_2.H91.A.NoContent</p>
+				<pre>&lt;a href=&quot;www.instagram.com&quot; class=&quot;small-nav__link&quot;&gt;&lt;svg version=&quot;1.1&quot; xmlns=&quot;http:...&lt;/a&gt; (select with "#root &gt; div &gt; div:nth-child(5) &gt; div:nth-child(3) &gt; div &gt; div:nth-child(3) &gt; div &gt; a:nth-child(3)")</pre>
+			</li>
+			<li class="result notice">
+				<h2>Notice: Check that text of the link describes the purpose of the link.</h2>
+				<p>WCAG2AAA.Principle2.Guideline2_4.2_4_9.H30</p>
+				<pre>&lt;a href=&quot;www.instagram.com&quot; class=&quot;small-nav__link&quot;&gt;&lt;svg version=&quot;1.1&quot; xmlns=&quot;http:...&lt;/a&gt; (select with "#root &gt; div &gt; div:nth-child(5) &gt; div:nth-child(3) &gt; div &gt; div:nth-child(3) &gt; div &gt; a:nth-child(3)")</pre>
+			</li>
+			<li class="result error">
+				<h2>Error: Duplicate id attribute value &quot;icomoon-ignore&quot; found on the web page.</h2>
+				<p>WCAG2AAA.Principle4.Guideline4_1.4_1_1.F77</p>
+				<pre>&lt;g id=&quot;icomoon-ignore&quot;&gt;&lt;/g&gt; (select with "#icomoon-ignore")</pre>
+			</li>
+			<li class="result error">
+				<h2>Error: This button element does not have a name available to an accessibility API. Valid names are: title undefined, element content, aria-label undefined, aria-labelledby undefined.</h2>
+				<p>WCAG2AAA.Principle4.Guideline4_1.4_1_2.H91.Button.Name</p>
+				<pre>&lt;button class=&quot;img-button&quot;&gt;&lt;svg version=&quot;1.1&quot; xmlns=&quot;http:...&lt;/button&gt; (select with "#root &gt; div &gt; div:nth-child(5) &gt; div:nth-child(4) &gt; div &gt; div &gt; button:nth-child(1)")</pre>
+			</li>
+			<li class="result notice">
+				<h2>Notice: Check that a change of context does not occur when this input field receives focus.</h2>
+				<p>WCAG2AAA.Principle3.Guideline3_2.3_2_1.G107</p>
+				<pre>&lt;button class=&quot;img-button&quot;&gt;&lt;svg version=&quot;1.1&quot; xmlns=&quot;http:...&lt;/button&gt; (select with "#root &gt; div &gt; div:nth-child(5) &gt; div:nth-child(4) &gt; div &gt; div &gt; button:nth-child(1)")</pre>
+			</li>
+			<li class="result error">
+				<h2>Error: Duplicate id attribute value &quot;icomoon-ignore&quot; found on the web page.</h2>
+				<p>WCAG2AAA.Principle4.Guideline4_1.4_1_1.F77</p>
+				<pre>&lt;g id=&quot;icomoon-ignore&quot;&gt;&lt;/g&gt; (select with "#icomoon-ignore")</pre>
+			</li>
+			<li class="result error">
+				<h2>Error: This button element does not have a name available to an accessibility API. Valid names are: title undefined, element content, aria-label undefined, aria-labelledby undefined.</h2>
+				<p>WCAG2AAA.Principle4.Guideline4_1.4_1_2.H91.Button.Name</p>
+				<pre>&lt;button class=&quot;img-button&quot;&gt;&lt;svg version=&quot;1.1&quot; xmlns=&quot;http:...&lt;/button&gt; (select with "#root &gt; div &gt; div:nth-child(5) &gt; div:nth-child(4) &gt; div &gt; div &gt; button:nth-child(2)")</pre>
+			</li>
+			<li class="result notice">
+				<h2>Notice: Check that a change of context does not occur when this input field receives focus.</h2>
+				<p>WCAG2AAA.Principle3.Guideline3_2.3_2_1.G107</p>
+				<pre>&lt;button class=&quot;img-button&quot;&gt;&lt;svg version=&quot;1.1&quot; xmlns=&quot;http:...&lt;/button&gt; (select with "#root &gt; div &gt; div:nth-child(5) &gt; div:nth-child(4) &gt; div &gt; div &gt; button:nth-child(2)")</pre>
+			</li>
+			<li class="result error">
+				<h2>Error: Duplicate id attribute value &quot;icomoon-ignore&quot; found on the web page.</h2>
+				<p>WCAG2AAA.Principle4.Guideline4_1.4_1_1.F77</p>
+				<pre>&lt;g id=&quot;icomoon-ignore&quot;&gt;&lt;/g&gt; (select with "#icomoon-ignore")</pre>
+			</li>
+			<li class="result error">
+				<h2>Error: This button element does not have a name available to an accessibility API. Valid names are: title undefined, element content, aria-label undefined, aria-labelledby undefined.</h2>
+				<p>WCAG2AAA.Principle4.Guideline4_1.4_1_2.H91.Button.Name</p>
+				<pre>&lt;button&gt;&lt;/button&gt; (select with "#root &gt; div &gt; div:nth-child(6) &gt; div:nth-child(1) &gt; button")</pre>
+			</li>
+			<li class="result notice">
+				<h2>Notice: Check that a change of context does not occur when this input field receives focus.</h2>
+				<p>WCAG2AAA.Principle3.Guideline3_2.3_2_1.G107</p>
+				<pre>&lt;button&gt;&lt;/button&gt; (select with "#root &gt; div &gt; div:nth-child(6) &gt; div:nth-child(1) &gt; button")</pre>
+			</li>
+			<li class="result error">
+				<h2>Error: This button element does not have a name available to an accessibility API. Valid names are: title undefined, element content, aria-label undefined, aria-labelledby undefined.</h2>
+				<p>WCAG2AAA.Principle4.Guideline4_1.4_1_2.H91.Button.Name</p>
+				<pre>&lt;button&gt;&lt;/button&gt; (select with "#root &gt; div &gt; div:nth-child(6) &gt; div:nth-child(2) &gt; button")</pre>
+			</li>
+			<li class="result notice">
+				<h2>Notice: Check that a change of context does not occur when this input field receives focus.</h2>
+				<p>WCAG2AAA.Principle3.Guideline3_2.3_2_1.G107</p>
+				<pre>&lt;button&gt;&lt;/button&gt; (select with "#root &gt; div &gt; div:nth-child(6) &gt; div:nth-child(2) &gt; button")</pre>
+			</li>
+			<li class="result error">
+				<h2>Error: This button element does not have a name available to an accessibility API. Valid names are: title undefined, element content, aria-label undefined, aria-labelledby undefined.</h2>
+				<p>WCAG2AAA.Principle4.Guideline4_1.4_1_2.H91.Button.Name</p>
+				<pre>&lt;button&gt;&lt;/button&gt; (select with "#root &gt; div &gt; div:nth-child(6) &gt; div:nth-child(3) &gt; button")</pre>
+			</li>
+			<li class="result notice">
+				<h2>Notice: Check that a change of context does not occur when this input field receives focus.</h2>
+				<p>WCAG2AAA.Principle3.Guideline3_2.3_2_1.G107</p>
+				<pre>&lt;button&gt;&lt;/button&gt; (select with "#root &gt; div &gt; div:nth-child(6) &gt; div:nth-child(3) &gt; button")</pre>
+			</li>
+			<li class="result warning">
+				<h2>Warning: If this element contains a navigation section, it is recommended that it be marked up as a list.</h2>
+				<p>WCAG2AAA.Principle1.Guideline1_3.1_3_1.H48</p>
+				<pre>&lt;div class=&quot;small-footer small-nav&quot;&gt;&lt;a href=&quot;http://www.facebook.co...&lt;/div&gt; (select with "#root &gt; div &gt; div:nth-child(7) &gt; div")</pre>
+			</li>
+			<li class="result error">
+				<h2>Error: Anchor element found with a valid href attribute, but no link content has been supplied.</h2>
+				<p>WCAG2AAA.Principle4.Guideline4_1.4_1_2.H91.A.NoContent</p>
+				<pre>&lt;a href=&quot;http://www.facebook.com&quot; target=&quot;_blank&quot; class=&quot;small-nav__link&quot;&gt;&lt;svg version=&quot;1.1&quot; xmlns=&quot;http:...&lt;/a&gt; (select with "#root &gt; div &gt; div:nth-child(7) &gt; div &gt; a:nth-child(1)")</pre>
+			</li>
+			<li class="result notice">
+				<h2>Notice: Check that text of the link describes the purpose of the link.</h2>
+				<p>WCAG2AAA.Principle2.Guideline2_4.2_4_9.H30</p>
+				<pre>&lt;a href=&quot;http://www.facebook.com&quot; target=&quot;_blank&quot; class=&quot;small-nav__link&quot;&gt;&lt;svg version=&quot;1.1&quot; xmlns=&quot;http:...&lt;/a&gt; (select with "#root &gt; div &gt; div:nth-child(7) &gt; div &gt; a:nth-child(1)")</pre>
+			</li>
+			<li class="result warning">
+				<h2>Warning: Check that this link&#39;s link text contains information indicating that the link will open in a new window.</h2>
+				<p>WCAG2AAA.Principle3.Guideline3_2.3_2_5.H83.3</p>
+				<pre>&lt;a href=&quot;http://www.facebook.com&quot; target=&quot;_blank&quot; class=&quot;small-nav__link&quot;&gt;&lt;svg version=&quot;1.1&quot; xmlns=&quot;http:...&lt;/a&gt; (select with "#root &gt; div &gt; div:nth-child(7) &gt; div &gt; a:nth-child(1)")</pre>
+			</li>
+			<li class="result error">
+				<h2>Error: Duplicate id attribute value &quot;icomoon-ignore&quot; found on the web page.</h2>
+				<p>WCAG2AAA.Principle4.Guideline4_1.4_1_1.F77</p>
+				<pre>&lt;g id=&quot;icomoon-ignore&quot;&gt;&lt;/g&gt; (select with "#icomoon-ignore")</pre>
+			</li>
+			<li class="result error">
+				<h2>Error: Anchor element found with a valid href attribute, but no link content has been supplied.</h2>
+				<p>WCAG2AAA.Principle4.Guideline4_1.4_1_2.H91.A.NoContent</p>
+				<pre>&lt;a href=&quot;www.github.com&quot; class=&quot;small-nav__link&quot;&gt;&lt;svg version=&quot;1.1&quot; xmlns=&quot;http:...&lt;/a&gt; (select with "#root &gt; div &gt; div:nth-child(7) &gt; div &gt; a:nth-child(2)")</pre>
+			</li>
+			<li class="result notice">
+				<h2>Notice: Check that text of the link describes the purpose of the link.</h2>
+				<p>WCAG2AAA.Principle2.Guideline2_4.2_4_9.H30</p>
+				<pre>&lt;a href=&quot;www.github.com&quot; class=&quot;small-nav__link&quot;&gt;&lt;svg version=&quot;1.1&quot; xmlns=&quot;http:...&lt;/a&gt; (select with "#root &gt; div &gt; div:nth-child(7) &gt; div &gt; a:nth-child(2)")</pre>
+			</li>
+			<li class="result error">
+				<h2>Error: Duplicate id attribute value &quot;icomoon-ignore&quot; found on the web page.</h2>
+				<p>WCAG2AAA.Principle4.Guideline4_1.4_1_1.F77</p>
+				<pre>&lt;g id=&quot;icomoon-ignore&quot;&gt;&lt;/g&gt; (select with "#icomoon-ignore")</pre>
+			</li>
+			<li class="result error">
+				<h2>Error: Anchor element found with a valid href attribute, but no link content has been supplied.</h2>
+				<p>WCAG2AAA.Principle4.Guideline4_1.4_1_2.H91.A.NoContent</p>
+				<pre>&lt;a href=&quot;www.instagram.com&quot; class=&quot;small-nav__link&quot;&gt;&lt;svg version=&quot;1.1&quot; xmlns=&quot;http:...&lt;/a&gt; (select with "#root &gt; div &gt; div:nth-child(7) &gt; div &gt; a:nth-child(3)")</pre>
+			</li>
+			<li class="result notice">
+				<h2>Notice: Check that text of the link describes the purpose of the link.</h2>
+				<p>WCAG2AAA.Principle2.Guideline2_4.2_4_9.H30</p>
+				<pre>&lt;a href=&quot;www.instagram.com&quot; class=&quot;small-nav__link&quot;&gt;&lt;svg version=&quot;1.1&quot; xmlns=&quot;http:...&lt;/a&gt; (select with "#root &gt; div &gt; div:nth-child(7) &gt; div &gt; a:nth-child(3)")</pre>
+			</li>
+			<li class="result error">
+				<h2>Error: Duplicate id attribute value &quot;icomoon-ignore&quot; found on the web page.</h2>
+				<p>WCAG2AAA.Principle4.Guideline4_1.4_1_1.F77</p>
+				<pre>&lt;g id=&quot;icomoon-ignore&quot;&gt;&lt;/g&gt; (select with "#icomoon-ignore")</pre>
+			</li>
+		</ul>
+
+	</div>
+
+</body>
+</html>
