@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class Intro extends Component {
 
     render() {
-        const { pageContent, nextPage } = this.props;
+        const { pageContent, nextPage, mainBodyRef } = this.props;
         const { heading, subheading } = pageContent;
         return (
             <div className={`page intro`}>
@@ -16,7 +16,7 @@ class Intro extends Component {
                             <h2 className="page__subheading">{subheading}</h2>
                         </div>
                     </div>
-                    <button type="button" onClick={nextPage} className="intro-next-button" aria-label="next page">
+                    <button type="button" onClick={() => nextPage(mainBodyRef)} className="intro-next-button" aria-label="next page">
                         <div className="pulse pulse-1" />
                         <div className="pulse pulse-2" />
                         <div className="dot__wrapper">

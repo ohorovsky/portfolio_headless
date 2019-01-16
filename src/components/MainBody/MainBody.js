@@ -53,7 +53,7 @@ class MainBody extends Component {
         const { updateMainLeftWidth, mainLeftWidth, pageContent, activePage, activeMainPage, updateActivePage, updatePageContent, mainPageNames, nextPage } = this.props;
 
         return (
-            <div className='main-body row columns small-12 medium-11 medium-centered'>
+            <div ref={e => this.mainBodyRef = e} className='main-body row columns small-12 medium-11 medium-centered'>
                 <ExpandBtn imageCount={imageCount} mainLeftWidth={mainLeftWidth} updateMainLeftWidth={updateMainLeftWidth} />
                 <div className="show-for-large">
                     <ImgArrows nextImage={this.nextImage} prevImage={this.prevImage} imageCount={imageCount} />
@@ -67,6 +67,7 @@ class MainBody extends Component {
                     mainLeftWidth={mainLeftWidth}
                     mainPageNames={mainPageNames}
                     nextPage={nextPage}
+                    mainBodyRef={this.mainBodyRef}
                 />
                 <MainRight
                     images={pageContent[activePage].images}

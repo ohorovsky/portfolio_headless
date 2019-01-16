@@ -48,7 +48,7 @@ class MainLeft extends Component {
 
   render() {
     const { animationFinished } = this.state;
-    const { pageContent, activePage, updatePageContent, updateActivePage, activeMainPage, mainPageNames, mainLeftWidth, nextPage } = this.props
+    const { pageContent, activePage, updatePageContent, updateActivePage, activeMainPage, mainPageNames, mainLeftWidth, nextPage, mainBodyRef } = this.props
     let boxPoseConfig;
     mainLeftWidth === 0 ? boxPoseConfig = "closed" : null
     mainLeftWidth === 1 ? boxPoseConfig = "half" : null
@@ -80,6 +80,7 @@ class MainLeft extends Component {
                         animationFinished={animationFinished}
                         nextPage={nextPage}
                         isLastPage={isLastPage}
+                        mainBodyRef={mainBodyRef}
                       />
                     </Page>
                   )

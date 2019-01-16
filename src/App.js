@@ -53,7 +53,8 @@ class App extends Component {
     })
   }
 
-  nextPage = () => {
+  nextPage = (scrollEl) => {
+    if (scrollEl) scrollEl.scrollTop = 0;
     let { pageContent, activePage, mainLeftWidth } = this.state
     if (activePage < pageContent.length - 1) {
       activePage++;

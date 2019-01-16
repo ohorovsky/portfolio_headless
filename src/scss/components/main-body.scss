@@ -27,7 +27,7 @@
     }
     @include breakpoint(medium down){
         flex-direction: column;
-        overflow: auto;
+        overflow: scroll;
         .img-buttons__wrapper{
             top: unset;
             bottom: 0;

@@ -5,7 +5,7 @@ import { Svg } from '../../utilities'
 class MainSimple extends Component {
 
     render() {
-        const { pageContent, nextPage, isLastPage } = this.props;
+        const { pageContent, nextPage, isLastPage, mainBodyRef } = this.props;
         const { heading, paragraphs } = pageContent;
         return (
             <div className={`page mainSimple`}>
@@ -21,7 +21,7 @@ class MainSimple extends Component {
                         )
                     })}
                     {!isLastPage && (
-                        <NextPageBtn nextPage={nextPage} />
+                        <NextPageBtn nextPage={nextPage} mainBodyRef={mainBodyRef} />
                     )}
                 </div>
             </div>

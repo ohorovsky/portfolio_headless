@@ -7,7 +7,7 @@ splash();
 async function splash() {
 	try {
 		// Test http://example.com/
-		const result = await pa11y(`${process.env.SITE}`, {
+		const result = await pa11y(`http://${process.env.SITE}`, {
 			// Log what's happening to the console
 			log: {
 				debug: console.log,

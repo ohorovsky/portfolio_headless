@@ -4,7 +4,8 @@ import { changeActivePage } from '../../helpers';
 class Projects extends Component {
 
     render() {
-        const { heading, paragraphs, projects } = this.props.pageContent;
+        const { pageContent, mainBodyRef } = this.props;
+        const { heading, paragraphs, projects } = pageContent;
         return (
             <div className={`page projects`}>
                 <div className="small-12 large-10 large-centered">
@@ -23,7 +24,7 @@ class Projects extends Component {
                         {projects.map(project => {
                             return (
 
-                                <div key={project} className="project-thumbnail" onClick={() => changeActivePage(project.pageRef, this.props)}>
+                                <div key={project} className="project-thumbnail" onClick={() => changeActivePage(project.pageRef, this.props, mainBodyRef)}>
                                     <img class="image" src={project.image} alt={project.name} />
                                     <div className="thumbnail-overlay"></div>
                                     <h2 className="thumbnail-heading" >{project.name}</h2>

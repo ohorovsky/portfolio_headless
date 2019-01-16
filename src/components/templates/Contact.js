@@ -32,18 +32,18 @@ class Contact extends Component {
                             </div>
                         </div>
                         <div className="form__wrapper">
-                            <form method="POST">
+                            <form action="https://formspree.io/o.horovsky@gmail.com" method="POST">
                                 <div className="input">
                                     <Svg name="form-name" />
                                     <input required="required" type="text" name="name" placeholder="Name" />
                                 </div>
                                 <div className="input">
                                     <Svg name="form-email" />
-                                    <input required="required" type="email" name="email" placeholder="Email" />
+                                    <input required="required" type="email" name="_replyto" placeholder="Email" />
                                 </div>
                                 <div className="input textarea">
                                     <Svg name="form-message" />
-                                    <textarea required="required" type="email" name="message" placeholder="Your Message" />
+                                    <textarea required="required" type="text" name="message" placeholder="Your Message" />
                                 </div>
                                 <input className="rect-button" type="submit" value="Send" />
                             </form>
