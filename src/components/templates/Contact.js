@@ -31,7 +31,7 @@ class Contact extends Component {
                                 <span>o.horovsky@gmail.com</span>
                             </div>
                         </div>
-                        <div className="form__wrapper">
+                        <div className="form__wrapper ">
                             <form action="https://formspree.io/o.horovsky@gmail.com" method="POST">
                                 <div className="input">
                                     <Svg name="form-name" />
