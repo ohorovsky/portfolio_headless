@@ -24,7 +24,9 @@ class TopBar extends Component {
         const { menuActive } = this.state;
         const { mainPageNames, activeMainPage, updatePageContent } = this.props;
         return (
-            <Fragment>
+            <div className="topbar">
+                <div className="body-background-left"></div>
+                <div className="body-background-right"></div>
                 <Logo />
                 <div className="hide-for-large mobile-menu__wrapper">
                     <div className="columns small-12 medium-11 medium-centered hamburger__wrapper">
@@ -32,7 +34,7 @@ class TopBar extends Component {
                     </div>
                     <MobileMenu mainPageNames={mainPageNames} menuActive={menuActive} activateMenu={this.activateMenu} activeMainPage={activeMainPage} updatePageContent={updatePageContent} />
                 </div>
-            </Fragment>
+            </div>
         )
     }
 }

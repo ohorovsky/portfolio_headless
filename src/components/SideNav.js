@@ -18,7 +18,7 @@ class SideNav extends Component {
         return (
             <div className="side-nav">
 
-                {pageContent.map((key, index) => <Button key={index} className='side-nav-button__wrapper' pose={activePage === index ? 'active' : 'inactive'}><button onClick={() => changeActivePage(index, this.props)}></button></Button>)}
+                {pageContent.map((key, index) => <Button key={index} className='side-nav-button__wrapper' pose={activePage === index ? 'active' : 'inactive'}><button onClick={() => changeActivePage(index, this.props)} title={`Go to subpage ${index + 1}`} aria-label={`Go to subpage ${index + 1}`} aria-labelledby={`Go to subpage ${index + 1}`}></button></Button>)}
 
             </div>
         )

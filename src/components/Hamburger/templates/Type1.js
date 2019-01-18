@@ -18,7 +18,7 @@ export default class Type1 extends Component {
             )
         }
         return (
-            <button type="button" className="hamburger type-1" onClick={activateMenu}>
+            <button type="button" className="hamburger type-1" onClick={activateMenu} title={`Hamburger - mobile menu`} aria-label={`Hamburger - mobile menu`} aria-labelledby={`Hamburger - mobile menu`}>
                 <div className="bar"></div>
                 <div className="bar"></div>
                 <div className="bar"></div>

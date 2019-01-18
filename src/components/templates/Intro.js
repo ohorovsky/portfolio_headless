@@ -16,7 +16,7 @@ class Intro extends Component {
                             <h2 className="page__subheading">{subheading}</h2>
                         </div>
                     </div>
-                    <button type="button" onClick={() => nextPage(mainBodyRef)} className="intro-next-button" aria-label="next page">
+                    <button type="button" onClick={() => nextPage(mainBodyRef)} className="intro-next-button" title="Next Page" aria-label="Next Page" aria-labelledby="Next Page">
                         <div className="pulse pulse-1" />
                         <div className="pulse pulse-2" />
                         <div className="dot__wrapper">

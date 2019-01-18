@@ -29,7 +29,11 @@ class SmallNav extends Component {
                                     pose={this.props.activeMainPage === key ? 'active' : 'inactive'}
                                     onClick={() => {
                                         this.changePage(key)
-                                    }}>
+                                    }}
+                                    title={`Go to page ${key}`}
+                                    aria-label={`Go to page ${key}`}
+                                    aria-labelledby={`Go to page ${key}`}
+                                >
                                     {this.props.mainPageNames[key]}
                                 </Button>
                             </Link>

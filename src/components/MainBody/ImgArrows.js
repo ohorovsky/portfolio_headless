@@ -22,10 +22,10 @@ export default class ImgArrows extends Component {
         const { prevImage, nextImage, imageCount } = this.props;
         return (
             <Wrapper pose={imageCount == 0 || imageCount == 1 ? 'hide' : 'show'} className="img-buttons__wrapper">
-                <button className="img-button" onClick={prevImage}>
+                <button className="img-button" onClick={prevImage} title="Previous image" aria-label="Previous image" aria-labelledby="Previous image">
                     <Svg name="prev" />
                 </button>
-                <button className="img-button" onClick={nextImage}>
+                <button className="img-button" onClick={nextImage} title="Next image" aria-label="Next image" aria-labelledby="Next image">
                     <Svg name="next" />
                 </button>
             </Wrapper>

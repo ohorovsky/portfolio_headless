@@ -84,11 +84,11 @@ export default class Photography extends Component {
                         <h1 className="page__heading">{heading}</h1>
                     </div>
                     <div className="filter__wrapper">
-                        <Button pose={activeFilter == 'all' ? 'active' : 'inactive'} type="button" className="filter-item" onClick={() => this.filterChange('all')}>
+                        <Button pose={activeFilter == 'all' ? 'active' : 'inactive'} type="button" className="filter-item" onClick={() => this.filterChange('all')} title={`Filter - All`} aria-label={`Filter - All`} aria-labelledby={`Filter - All`}>
                             <span>All</span>
                         </Button>
                         {filter.map((filterType, index) => (
-                            <Button pose={activeFilter == filterType ? 'active' : 'inactive'} key={(index)} type="button" className="filter-item" onClick={() => this.filterChange(filterType)}>
+                            <Button pose={activeFilter == filterType ? 'active' : 'inactive'} key={(index)} type="button" className="filter-item" onClick={() => this.filterChange(filterType)} title={`Filter - ${splitCamelCase(capitalize(filterType))}`} aria-label={`Filter - ${splitCamelCase(capitalize(filterType))}`} aria-labelledby={`Filter - ${splitCamelCase(capitalize(filterType))}`}>
                                 <span>{splitCamelCase(capitalize(filterType))}</span>
                             </Button>
                         ))}

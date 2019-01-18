@@ -7,7 +7,7 @@ splash();
 async function splash() {
 	try {
 		// Test http://example.com/
-		const result = await pa11y(`${process.env.SITE}`, {
+		const result = await pa11y(`http://${process.env.SITE}/photography`, {
 			// Log what's happening to the console
 			log: {
 				debug: console.log,
@@ -23,14 +23,12 @@ async function splash() {
 			includeWarnings: true,
 			level: 'error',
 			actions: [
-				'wait for element .intro-next-button to be visible',
-				'click element .intro-next-button',
-				'wait for element .next-page__wrapper to be visible',
-				`screen capture ./screenshots/${process.env.SITE}-about.png`,
+				'wait for element .filter-item to be visible',
+				`screen capture ./screenshots/${process.env.SITE}-Photography.png`,
 			],
 		});
 		const htmlResults = await html.results(result);
-		testHelpers.writeReportToHTML(htmlResults, `${process.env.SITE} About Report`);
+		testHelpers.writeReportToHTML(htmlResults, `${process.env.SITE} photography Report`);
 	} catch (error) {
 		// Output an error if it occurred
 		console.error(error.message);
