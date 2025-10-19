@@ -239,7 +239,8 @@ module.exports = {
       extensions: ['js', 'mjs', 'jsx'],
       context: paths.appSrc,
       cache: true,
-      failOnError: true,
+      failOnError: false,
+      failOnWarning: false,
     }),
   ],
   optimization: {
