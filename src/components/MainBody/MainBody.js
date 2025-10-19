@@ -20,17 +20,22 @@ class MainBody extends Component {
     componentDidUpdate = (prevProps, prevState) => {
         const { pageContent, activePage } = this.props;
         const imageCount = pageContent[activePage].images ? pageContent[activePage].images.length : 0
-        prevState.imageCount !== imageCount ? this.setState({ imageCount }) : null
+        if (prevState.imageCount !== imageCount) {
+            this.setState({ imageCount });
+        }
         // this is to make sure that activeImage will reset on change page
-        prevProps.activePage !== activePage ? this.setState({ activeImage: 0 }) : null
-
+        if (prevProps.activePage !== activePage) {
+            this.setState({ activeImage: 0 });
+        }
     }
 
     nextImage = () => {
         let { activeImage, imageCount, carouselDirection } = this.state;
         carouselDirection = '+'
         activeImage++;
-        activeImage == imageCount ? activeImage = 0 : null
+        if (activeImage == imageCount) {
+            activeImage = 0;
+        }
         this.setState({
             activeImage,
             carouselDirection
@@ -41,7 +46,9 @@ class MainBody extends Component {
         let { activeImage, imageCount, carouselDirection } = this.state;
         carouselDirection = '-'
         activeImage--;
-        activeImage == -1 ? activeImage = imageCount - 1 : null
+        if (activeImage == -1) {
+            activeImage = imageCount - 1;
+        }
         this.setState({
             activeImage,
             carouselDirection

@@ -50,9 +50,13 @@ class MainLeft extends Component {
     const { animationFinished } = this.state;
     const { pageContent, activePage, updatePageContent, updateActivePage, activeMainPage, mainPageNames, mainLeftWidth, nextPage, mainBodyRef } = this.props
     let boxPoseConfig;
-    mainLeftWidth === 0 ? boxPoseConfig = "closed" : null
-    mainLeftWidth === 1 ? boxPoseConfig = "half" : null
-    mainLeftWidth === 2 ? boxPoseConfig = "open" : null
+    if (mainLeftWidth === 0) {
+      boxPoseConfig = "closed";
+    } else if (mainLeftWidth === 1) {
+      boxPoseConfig = "half";
+    } else if (mainLeftWidth === 2) {
+      boxPoseConfig = "open";
+    }
 
     return (
       <Box className={`main-left`} pose={boxPoseConfig} onPoseComplete={() => this.updateAnimationStatus(true)}>

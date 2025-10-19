@@ -1,9 +1,11 @@
 import React from "react";
-import ReactDOM from "react-dom";
+import { createRoot } from "react-dom/client";
 import "./scss/App.scss";
 import Router from "./components/Router";
 import registerServiceWorker from "./registerServiceWorker";
 
-ReactDOM.render(<Router />, document.getElementById("root"));
+const container = document.getElementById("root");
+const root = createRoot(container);
+root.render(<Router />);
 registerServiceWorker();
 
